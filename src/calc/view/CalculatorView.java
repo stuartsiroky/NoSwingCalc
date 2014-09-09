@@ -21,7 +21,21 @@ public class CalculatorView extends JFrameView {
 	public static final String CLEAR = "Clr";
 	public static final String EQUALS = "=";
 	private JTextField textField = new JTextField();
-
+	public  JButton jButton1 = new JButton("1");
+	public  JButton jButton2 = new JButton("2");
+	public  JButton jButton3 = new JButton("3");
+	public  JButton jButton4 = new JButton("4");
+	public  JButton jButton5 = new JButton("5");
+	public  JButton jButton6 = new JButton("6");
+	public  JButton jButton7 = new JButton("7");
+	public  JButton jButton8 = new JButton("8");
+	public  JButton jButton9 = new JButton("9");
+	public  JButton jButton0 = new JButton("0");
+	public  JButton minusButton = new JButton(MINUS);
+	public  JButton plusButton = new JButton(PLUS);
+	public  JButton clearButton = new JButton(CLEAR);
+	public  JButton equalsButton = new JButton(EQUALS);
+	
 	public CalculatorView(CalculatorModel model, CalculatorController controller) {
 		super(model, controller);
 		System.out.println("Initial");
@@ -29,33 +43,33 @@ public class CalculatorView extends JFrameView {
 		this.getContentPane().add(textField, BorderLayout.NORTH);
 		JPanel buttonPanel = new JPanel();
 		Handler handler = new Handler();
-		JButton jButton1 = new JButton("1");
+		//JButton jButton1 = new JButton("1");
 		jButton1.addActionListener(handler);
-		JButton jButton2 = new JButton("2");
+		//JButton jButton2 = new JButton("2");
 		jButton2.addActionListener(handler);
-		JButton jButton3 = new JButton("3");
+		//JButton jButton3 = new JButton("3");
 		jButton3.addActionListener(handler);
-		JButton jButton4 = new JButton("4");
+		//JButton jButton4 = new JButton("4");
 		jButton4.addActionListener(handler);
-		JButton jButton5 = new JButton("5");
+		//JButton jButton5 = new JButton("5");
 		jButton5.addActionListener(handler);
-		JButton jButton6 = new JButton("6");
+		//JButton jButton6 = new JButton("6");
 		jButton6.addActionListener(handler);
-		JButton jButton7 = new JButton("7");
+		//JButton jButton7 = new JButton("7");
 		jButton7.addActionListener(handler);
-		JButton jButton8 = new JButton("8");
+		//JButton jButton8 = new JButton("8");
 		jButton8.addActionListener(handler);
-		JButton jButton9 = new JButton("9");
+		//JButton jButton9 = new JButton("9");
 		jButton9.addActionListener(handler);
-		JButton jButton0 = new JButton("0");
+		//JButton jButton0 = new JButton("0");
 		jButton0.addActionListener(handler);
-		JButton minusButton = new JButton(MINUS);
+		//JButton minusButton = new JButton(MINUS);
 		minusButton.addActionListener(handler);
-		JButton plusButton = new JButton(PLUS);
+		//JButton plusButton = new JButton(PLUS);
 		plusButton.addActionListener(handler);
-		JButton clearButton = new JButton(CLEAR);
+		//JButton clearButton = new JButton(CLEAR);
 		clearButton.addActionListener(handler);
-		JButton equalsButton = new JButton(EQUALS);
+		//JButton equalsButton = new JButton(EQUALS);
 		equalsButton.addActionListener(handler);
 		buttonPanel.setLayout(new GridLayout(4, 4, 5, 5));
 		this.getContentPane().add(buttonPanel, BorderLayout.CENTER);
@@ -95,10 +109,15 @@ public class CalculatorView extends JFrameView {
 
 	public static void main(String[] args) {
 		CalculatorController cc = new CalculatorController();
-		cc.operation("1");
-		cc.operation(PLUS);
-		cc.operation("3");
-		cc.operation(EQUALS);
+		CalculatorView cv = (CalculatorView) cc.getView();
+		cv.jButton1.pushed();
+		cv.plusButton.pushed();
+		cv.jButton3.pushed();
+		cv.equalsButton.pushed();
+		//cc.operation("1");
+		//cc.operation(PLUS);
+		//cc.operation("3");
+		//cc.operation(EQUALS);
 	}
 
 }

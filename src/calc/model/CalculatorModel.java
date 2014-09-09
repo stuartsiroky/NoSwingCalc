@@ -16,9 +16,13 @@ public class CalculatorModel extends AbstractModel {
 	
 	public void add()//throws Digit5
 	{//if(current == 5) throw new Digit5("method add class CalculatorModel: current is 5");
-		state = "add"; total = current;}
+		state = "add"; total = current;
+		System.out.println("STUART CalculatorModel.add");
+		}
 	
-	public void subtract(){state = "subtract"; total = current;}
+	public void subtract(){state = "subtract"; total = current;
+	System.out.println("STUART CalculatorModel.subtract");
+	}
 	
 	public void equals(){
 		if(state == "add"){

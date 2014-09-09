@@ -1,5 +1,5 @@
 package calc.noSwing;
 
 public interface ActionListener {
- //TODO????
+	void actionPerformed(ActionEvent e);
 }
