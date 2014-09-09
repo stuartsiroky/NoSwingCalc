@@ -13,7 +13,7 @@ public class JButton {
 	}
 
 	public void pushed() {
-		ActionEvent e = new ActionEvent(null,1,str);
+		ActionEvent e = new ActionEvent(this,1,str);
 		hdlr.actionPerformed(e);
 	}
 }

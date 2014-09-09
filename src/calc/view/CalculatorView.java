@@ -1,5 +1,5 @@
 package calc.view;
-
+//import gov.nasa.jpf.vm.Verify;
 //import javax.swing.*; 
 //import java.awt.*; 
 //import java.awt.event.*;
@@ -102,22 +102,68 @@ public class CalculatorView extends JFrameView {
 	public class Handler implements ActionListener {
 		// Event handling is handled locally
 		public void actionPerformed(ActionEvent e) {
-			((CalculatorController) getController()).operation(e
-					.getActionCommand());
+			CalculatorController c = (CalculatorController) getController();
+			String ae = e.getActionCommand();
+			c.operation(ae);
+			//((CalculatorController) getController()).operation(e
+			//		.getActionCommand());
 		}
 	}
 
 	public static void main(String[] args) {
+//		int a = Verify.getInt(-1,2);
+//		int b = Verify.getInt(-1,2);
+		int a=1;
+		int b=3;
 		CalculatorController cc = new CalculatorController();
 		CalculatorView cv = (CalculatorView) cc.getView();
-		cv.jButton1.pushed();
-		cv.plusButton.pushed();
-		cv.jButton3.pushed();
-		cv.equalsButton.pushed();
+		//cv.jButton1.pushed();
+		//cv.plusButton.pushed();
+		//cv.jButton3.pushed();
+		//cv.equalsButton.pushed();
 		//cc.operation("1");
 		//cc.operation(PLUS);
 		//cc.operation("3");
 		//cc.operation(EQUALS);
+		start(cv,a,b);
+	}
+	static void start (CalculatorView calc, int a, int b) {
+		if(a > b){
+			addition(calc,a,b);	
+		} else if(a < b) {
+			subtraction(calc,b,a);
+		}
+		equals(calc);
+	}
+	
+	static void addition(CalculatorView calc, int a, int b){
+		pickButton(calc,a);
+		calc.plusButton.pushed();
+		pickButton(calc,b);
+	}
+	
+	static void subtraction(CalculatorView calc, int a, int b){
+		pickButton(calc,b);
+		calc.minusButton.pushed();
+		pickButton(calc,a);
+	}
+	
+	static void equals(CalculatorView calc){
+		calc.equalsButton.pushed();
+	}
+	static void pickButton(CalculatorView calc, int val){
+		switch(val) {
+		case 0: calc.jButton0.pushed(); break;
+		case 1: calc.jButton1.pushed(); break;
+		case 2: calc.jButton2.pushed(); break;
+		case 3: calc.jButton3.pushed(); break;
+		case 4: calc.jButton4.pushed(); break;
+		case 5: calc.jButton5.pushed(); break;
+		case 6: calc.jButton6.pushed(); break;
+		case 7: calc.jButton7.pushed(); break;
+		case 8: calc.jButton8.pushed(); break;
+		case 9: calc.jButton9.pushed(); break;
+		}
 	}
 
 }

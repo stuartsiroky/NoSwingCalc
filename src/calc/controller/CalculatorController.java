@@ -6,24 +6,39 @@ import calc.view.JFrameView;
 
 public class CalculatorController extends AbstractController {
 	public CalculatorController(){
-		setModel(new CalculatorModel());
-		setView(new CalculatorView((CalculatorModel)getModel(), this));
+		CalculatorModel cm = new CalculatorModel();
+		setModel(cm);
+		//setModel(new CalculatorModel());
+		CalculatorView cv = new CalculatorView(cm,this);
+		setView(cv);
+		//setView(new CalculatorView((CalculatorModel)getModel(), this));
 		((JFrameView)getView()).setVisible(true);
 	}
 	public void operation(String option){
 		if(option.equals(CalculatorView.MINUS)){
-			((CalculatorModel)getModel()).subtract();
+			CalculatorModel cm = (CalculatorModel)getModel();
+			cm.subtract();
+			//((CalculatorModel)getModel()).subtract();
 		}else if(option.equals(CalculatorView.PLUS)){
 		//	try{
-				((CalculatorModel)getModel()).add();
+			CalculatorModel cm = (CalculatorModel)getModel();
+			cm.add();
+			//((CalculatorModel)getModel()).add();
 		//	}catch(Digit5 ex)
 		//	{System.out.println(ex.getMessage());}
 		}else if(option.equals(CalculatorView.CLEAR)){
-			((CalculatorModel)getModel()).clear();
+			CalculatorModel cm = (CalculatorModel)getModel();
+			cm.clear();
+			//((CalculatorModel)getModel()).clear();
 		}else if(option.equals(CalculatorView.EQUALS)){
-			((CalculatorModel)getModel()).equals();
+			CalculatorModel cm = (CalculatorModel)getModel();
+			cm.equals();
+			//((CalculatorModel)getModel()).equals();
 		}else {
-			((CalculatorModel)getModel()).store(Integer.parseInt(option));
+			CalculatorModel cm = (CalculatorModel)getModel();
+			int val = Integer.parseInt(option);
+			cm.store(val);
+			//((CalculatorModel)getModel()).store(Integer.parseInt(option));
 		}
 	}
 }
