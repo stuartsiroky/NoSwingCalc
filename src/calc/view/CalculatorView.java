@@ -1,5 +1,5 @@
 package calc.view;
-//import gov.nasa.jpf.vm.Verify;
+//FORJPF import gov.nasa.jpf.vm.Verify;
 //import javax.swing.*; 
 //import java.awt.*; 
 //import java.awt.event.*;
@@ -20,6 +20,7 @@ public class CalculatorView extends JFrameView {
 	public static final String MINUS = "-";
 	public static final String CLEAR = "Clr";
 	public static final String EQUALS = "=";
+	public static int fake_state = 0;
 	private JTextField textField = new JTextField();
 	public  JButton jButton1 = new JButton("1");
 	public  JButton jButton2 = new JButton("2");
@@ -35,6 +36,7 @@ public class CalculatorView extends JFrameView {
 	public  JButton plusButton = new JButton(PLUS);
 	public  JButton clearButton = new JButton(CLEAR);
 	public  JButton equalsButton = new JButton(EQUALS);
+	public Handler handler = new Handler();
 	
 	public CalculatorView(CalculatorModel model, CalculatorController controller) {
 		super(model, controller);
@@ -42,7 +44,7 @@ public class CalculatorView extends JFrameView {
 		textField.setText("0");
 		this.getContentPane().add(textField, BorderLayout.NORTH);
 		JPanel buttonPanel = new JPanel();
-		Handler handler = new Handler();
+		//Handler handler = new Handler();
 		//JButton jButton1 = new JButton("1");
 		jButton1.addActionListener(handler);
 		//JButton jButton2 = new JButton("2");
@@ -102,19 +104,24 @@ public class CalculatorView extends JFrameView {
 	public class Handler implements ActionListener {
 		// Event handling is handled locally
 		public void actionPerformed(ActionEvent e) {
+			if(fake_state == 0){
+				ModelEvent me = new ModelEvent(this, 101, "invalid path", -101);
+				modelChanged(me);
+			} else {
 			CalculatorController c = (CalculatorController) getController();
 			String ae = e.getActionCommand();
 			c.operation(ae);
-			//((CalculatorController) getController()).operation(e
-			//		.getActionCommand());
+			((CalculatorController) getController()).operation(e
+					.getActionCommand());
+		    }
 		}
 	}
 
 	public static void main(String[] args) {
-//		int a = Verify.getInt(-1,2);
-//		int b = Verify.getInt(-1,2);
-		int a=1;
-		int b=3;
+		int a = 1;
+		int b = 3;	
+		//FORJPF 		int a = Verify.getInt(-1,2);
+		//FORJPF 		int b = Verify.getInt(-1,2);
 		CalculatorController cc = new CalculatorController();
 		CalculatorView cv = (CalculatorView) cc.getView();
 		//cv.jButton1.pushed();
@@ -129,10 +136,17 @@ public class CalculatorView extends JFrameView {
 	}
 	static void start (CalculatorView calc, int a, int b) {
 		if(a > b){
+			fake_state = 0;
 			addition(calc,a,b);	
 		} else if(a < b) {
+			fake_state = 0;
 			subtraction(calc,b,a);
+		} else {
+			fake_state = 1;
+			ActionEvent e = new ActionEvent(calc, 101, "101");
+			calc.handler.actionPerformed(e);
 		}
+		
 		equals(calc);
 	}
 	
