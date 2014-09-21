@@ -1,0 +1,12 @@
+public class calc.model.TestCalcModel extends java.lang.Object
+{
+
+    public void <init>()
+    {
+        calc.model.TestCalcModel this;
+
+        this := @this: calc.model.TestCalcModel;
+        specialinvoke this.<java.lang.Object: void <init>()>();
+        return;
+    }
+}

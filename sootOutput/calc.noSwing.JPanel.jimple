@@ -1,0 +1,34 @@
+public class calc.noSwing.JPanel extends java.lang.Object
+{
+
+    public void add(calc.noSwing.JButton, java.lang.Object)
+    {
+        calc.noSwing.JPanel this;
+        calc.noSwing.JButton jButton1;
+        java.lang.Object object;
+
+        this := @this: calc.noSwing.JPanel;
+        jButton1 := @parameter0: calc.noSwing.JButton;
+        object := @parameter1: java.lang.Object;
+        return;
+    }
+
+    public void setLayout(calc.noSwing.GridLayout)
+    {
+        calc.noSwing.JPanel this;
+        calc.noSwing.GridLayout gridLayout;
+
+        this := @this: calc.noSwing.JPanel;
+        gridLayout := @parameter0: calc.noSwing.GridLayout;
+        return;
+    }
+
+    public void <init>()
+    {
+        calc.noSwing.JPanel this;
+
+        this := @this: calc.noSwing.JPanel;
+        specialinvoke this.<java.lang.Object: void <init>()>();
+        return;
+    }
+}

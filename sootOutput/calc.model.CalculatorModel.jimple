@@ -1,0 +1,159 @@
+public class calc.model.CalculatorModel extends calc.model.AbstractModel
+{
+    private int total;
+    private int current;
+    private java.lang.String state;
+
+    public void clear()
+    {
+        calc.model.CalculatorModel this;
+        int temp$0;
+
+        this := @this: calc.model.CalculatorModel;
+        temp$0 = 0;
+        this.<calc.model.CalculatorModel: int total> = temp$0;
+        virtualinvoke this.<calc.model.CalculatorModel: void store(int)>(0);
+        return;
+    }
+
+    public void store(int)
+    {
+        calc.model.CalculatorModel this;
+        int value, temp$1;
+        calc.model.ModelEvent me, temp$0;
+        java.io.PrintStream temp$2;
+        java.lang.StringBuffer temp$3;
+        java.lang.String temp$4;
+
+        this := @this: calc.model.CalculatorModel;
+        value := @parameter0: int;
+        this.<calc.model.CalculatorModel: int current> = value;
+        temp$0 = new calc.model.ModelEvent;
+        temp$1 = this.<calc.model.CalculatorModel: int current>;
+        specialinvoke temp$0.<calc.model.ModelEvent: void <init>(java.lang.Object,int,java.lang.String,int)>(this, 1, "", temp$1);
+        me = temp$0;
+        temp$2 = <java.lang.System: java.io.PrintStream out>;
+        temp$3 = new java.lang.StringBuffer;
+        specialinvoke temp$3.<java.lang.StringBuffer: void <init>()>();
+        virtualinvoke temp$3.<java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.Object)>("model.store::");
+        virtualinvoke temp$3.<java.lang.StringBuffer: java.lang.StringBuffer append(int)>(value);
+        temp$4 = virtualinvoke temp$3.<java.lang.StringBuffer: java.lang.String toString()>();
+        virtualinvoke temp$2.<java.io.PrintStream: void println(java.lang.String)>(temp$4);
+        virtualinvoke this.<calc.model.CalculatorModel: void notifyChanged(calc.model.ModelEvent)>(me);
+        return;
+    }
+
+    public void add()
+    {
+        calc.model.CalculatorModel this;
+        java.lang.String temp$0;
+        int temp$1;
+        java.io.PrintStream temp$2;
+
+        this := @this: calc.model.CalculatorModel;
+        temp$0 = "add";
+        this.<calc.model.CalculatorModel: java.lang.String state> = temp$0;
+        temp$1 = this.<calc.model.CalculatorModel: int current>;
+        this.<calc.model.CalculatorModel: int total> = temp$1;
+        temp$2 = <java.lang.System: java.io.PrintStream out>;
+        virtualinvoke temp$2.<java.io.PrintStream: void println(java.lang.String)>("STUART CalculatorModel.add");
+        return;
+    }
+
+    public void subtract()
+    {
+        calc.model.CalculatorModel this;
+        java.lang.String temp$0;
+        int temp$1;
+        java.io.PrintStream temp$2;
+
+        this := @this: calc.model.CalculatorModel;
+        temp$0 = "subtract";
+        this.<calc.model.CalculatorModel: java.lang.String state> = temp$0;
+        temp$1 = this.<calc.model.CalculatorModel: int current>;
+        this.<calc.model.CalculatorModel: int total> = temp$1;
+        temp$2 = <java.lang.System: java.io.PrintStream out>;
+        virtualinvoke temp$2.<java.io.PrintStream: void println(java.lang.String)>("STUART CalculatorModel.subtract");
+        return;
+    }
+
+    public void equals()
+    {
+        calc.model.CalculatorModel this;
+        java.lang.String temp$0, temp$12, temp$14;
+        int temp$1, temp$2, temp$3, temp$4, temp$5, temp$6, temp$7, temp$9, temp$13;
+        calc.model.ModelEvent me, temp$8;
+        java.io.PrintStream temp$10;
+        java.lang.StringBuffer temp$11;
+
+        this := @this: calc.model.CalculatorModel;
+        temp$0 = this.<calc.model.CalculatorModel: java.lang.String state>;
+        if temp$0 == "add" goto label0;
+
+        goto label1;
+
+     label0:
+        nop;
+        temp$1 = this.<calc.model.CalculatorModel: int total>;
+        temp$2 = this.<calc.model.CalculatorModel: int current>;
+        temp$3 = temp$1 + temp$2;
+        this.<calc.model.CalculatorModel: int total> = temp$3;
+        goto label2;
+
+     label1:
+        nop;
+        temp$4 = this.<calc.model.CalculatorModel: int total>;
+        temp$5 = this.<calc.model.CalculatorModel: int current>;
+        temp$6 = temp$4 - temp$5;
+        this.<calc.model.CalculatorModel: int total> = temp$6;
+
+     label2:
+        nop;
+        temp$7 = this.<calc.model.CalculatorModel: int total>;
+        this.<calc.model.CalculatorModel: int current> = temp$7;
+        temp$8 = new calc.model.ModelEvent;
+        temp$9 = this.<calc.model.CalculatorModel: int total>;
+        specialinvoke temp$8.<calc.model.ModelEvent: void <init>(java.lang.Object,int,java.lang.String,int)>(this, 1, "", temp$9);
+        me = temp$8;
+        temp$10 = <java.lang.System: java.io.PrintStream out>;
+        temp$11 = new java.lang.StringBuffer;
+        specialinvoke temp$11.<java.lang.StringBuffer: void <init>()>();
+        virtualinvoke temp$11.<java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.Object)>("model.equals:: state = ");
+        temp$12 = this.<calc.model.CalculatorModel: java.lang.String state>;
+        virtualinvoke temp$11.<java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.Object)>(temp$12);
+        virtualinvoke temp$11.<java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.Object)>(" total = ");
+        temp$13 = this.<calc.model.CalculatorModel: int current>;
+        virtualinvoke temp$11.<java.lang.StringBuffer: java.lang.StringBuffer append(int)>(temp$13);
+        temp$14 = virtualinvoke temp$11.<java.lang.StringBuffer: java.lang.String toString()>();
+        virtualinvoke temp$10.<java.io.PrintStream: void println(java.lang.String)>(temp$14);
+        virtualinvoke this.<calc.model.CalculatorModel: void notifyChanged(calc.model.ModelEvent)>(me);
+        return;
+    }
+
+    public int getTotal()
+    {
+        calc.model.CalculatorModel this;
+        int temp$0;
+
+        this := @this: calc.model.CalculatorModel;
+        temp$0 = this.<calc.model.CalculatorModel: int total>;
+        return temp$0;
+    }
+
+    public void <init>()
+    {
+        calc.model.CalculatorModel this;
+        int temp$0, temp$1;
+        java.lang.String temp$2;
+
+        this := @this: calc.model.CalculatorModel;
+        specialinvoke this.<calc.model.AbstractModel: void <init>()>();
+        temp$0 = 0;
+        this.<calc.model.CalculatorModel: int total> = temp$0;
+        temp$1 = 0;
+        this.<calc.model.CalculatorModel: int current> = temp$1;
+        temp$2 = "add";
+        this.<calc.model.CalculatorModel: java.lang.String state> = temp$2;
+        return;
+    }
+}

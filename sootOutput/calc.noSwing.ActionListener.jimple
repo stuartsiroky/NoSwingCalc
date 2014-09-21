@@ -1,0 +1,5 @@
+public interface  calc.noSwing.ActionListener extends java.lang.Object
+{
+
+    public abstract void actionPerformed(calc.noSwing.ActionEvent);
+}

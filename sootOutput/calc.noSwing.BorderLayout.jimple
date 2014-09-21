@@ -1,0 +1,25 @@
+public class calc.noSwing.BorderLayout extends java.lang.Object
+{
+    public static final java.lang.String CENTER;
+    public static final java.lang.String NORTH;
+
+    static void <clinit>()
+    {
+        java.lang.String temp$0, temp$1;
+
+        temp$0 = null;
+        <calc.noSwing.BorderLayout: java.lang.String CENTER> = temp$0;
+        temp$1 = null;
+        <calc.noSwing.BorderLayout: java.lang.String NORTH> = temp$1;
+        return;
+    }
+
+    public void <init>()
+    {
+        calc.noSwing.BorderLayout this;
+
+        this := @this: calc.noSwing.BorderLayout;
+        specialinvoke this.<java.lang.Object: void <init>()>();
+        return;
+    }
+}

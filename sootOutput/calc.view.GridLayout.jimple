@@ -1,0 +1,17 @@
+public class calc.view.GridLayout extends java.lang.Object
+{
+
+    public void <init>(int, int, int, int)
+    {
+        calc.view.GridLayout this;
+        int i, j, k, l;
+
+        this := @this: calc.view.GridLayout;
+        i := @parameter0: int;
+        j := @parameter1: int;
+        k := @parameter2: int;
+        l := @parameter3: int;
+        specialinvoke this.<java.lang.Object: void <init>()>();
+        return;
+    }
+}

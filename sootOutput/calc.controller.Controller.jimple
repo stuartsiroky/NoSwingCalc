@@ -1,0 +1,11 @@
+public interface  calc.controller.Controller extends java.lang.Object
+{
+
+    public abstract void setModel(calc.model.Model);
+
+    public abstract calc.model.Model getModel();
+
+    public abstract calc.view.View getView();
+
+    public abstract void setView(calc.view.View);
+}

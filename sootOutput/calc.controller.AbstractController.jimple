@@ -1,0 +1,56 @@
+public abstract class calc.controller.AbstractController extends java.lang.Object implements calc.controller.Controller
+{
+    private calc.view.View view;
+    private calc.model.Model model;
+
+    public void setModel(calc.model.Model)
+    {
+        calc.controller.AbstractController this;
+        calc.model.Model model;
+
+        this := @this: calc.controller.AbstractController;
+        model := @parameter0: calc.model.Model;
+        this.<calc.controller.AbstractController: calc.model.Model model> = model;
+        return;
+    }
+
+    public calc.model.Model getModel()
+    {
+        calc.controller.AbstractController this;
+        calc.model.Model temp$0;
+
+        this := @this: calc.controller.AbstractController;
+        temp$0 = this.<calc.controller.AbstractController: calc.model.Model model>;
+        return temp$0;
+    }
+
+    public calc.view.View getView()
+    {
+        calc.controller.AbstractController this;
+        calc.view.View temp$0;
+
+        this := @this: calc.controller.AbstractController;
+        temp$0 = this.<calc.controller.AbstractController: calc.view.View view>;
+        return temp$0;
+    }
+
+    public void setView(calc.view.View)
+    {
+        calc.controller.AbstractController this;
+        calc.view.View view;
+
+        this := @this: calc.controller.AbstractController;
+        view := @parameter0: calc.view.View;
+        this.<calc.controller.AbstractController: calc.view.View view> = view;
+        return;
+    }
+
+    public void <init>()
+    {
+        calc.controller.AbstractController this;
+
+        this := @this: calc.controller.AbstractController;
+        specialinvoke this.<java.lang.Object: void <init>()>();
+        return;
+    }
+}

@@ -1,0 +1,31 @@
+public class calc.model.ModelEvent extends calc.noSwing.ActionEvent
+{
+    private int amount;
+
+    public void <init>(java.lang.Object, int, java.lang.String, int)
+    {
+        calc.model.ModelEvent this;
+        java.lang.Object obj;
+        int id, amount;
+        java.lang.String message;
+
+        this := @this: calc.model.ModelEvent;
+        obj := @parameter0: java.lang.Object;
+        id := @parameter1: int;
+        message := @parameter2: java.lang.String;
+        amount := @parameter3: int;
+        specialinvoke this.<calc.noSwing.ActionEvent: void <init>(java.lang.Object,int,java.lang.String)>(obj, id, message);
+        this.<calc.model.ModelEvent: int amount> = amount;
+        return;
+    }
+
+    public int getAmount()
+    {
+        calc.model.ModelEvent this;
+        int temp$0;
+
+        this := @this: calc.model.ModelEvent;
+        temp$0 = this.<calc.model.ModelEvent: int amount>;
+        return temp$0;
+    }
+}

@@ -1,0 +1,36 @@
+public class calc.noSwing.Container extends java.lang.Object
+{
+
+    public void add(calc.noSwing.JTextField, java.lang.String)
+    {
+        calc.noSwing.Container this;
+        calc.noSwing.JTextField textField;
+        java.lang.String north;
+
+        this := @this: calc.noSwing.Container;
+        textField := @parameter0: calc.noSwing.JTextField;
+        north := @parameter1: java.lang.String;
+        return;
+    }
+
+    public void add(calc.noSwing.JPanel, java.lang.String)
+    {
+        calc.noSwing.Container this;
+        calc.noSwing.JPanel buttonPanel;
+        java.lang.String center;
+
+        this := @this: calc.noSwing.Container;
+        buttonPanel := @parameter0: calc.noSwing.JPanel;
+        center := @parameter1: java.lang.String;
+        return;
+    }
+
+    public void <init>()
+    {
+        calc.noSwing.Container this;
+
+        this := @this: calc.noSwing.Container;
+        specialinvoke this.<java.lang.Object: void <init>()>();
+        return;
+    }
+}

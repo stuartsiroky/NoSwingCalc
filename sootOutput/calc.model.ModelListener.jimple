@@ -1,0 +1,5 @@
+public interface  calc.model.ModelListener extends java.lang.Object
+{
+
+    public abstract void modelChanged(calc.model.ModelEvent);
+}

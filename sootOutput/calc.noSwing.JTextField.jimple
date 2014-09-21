@@ -1,0 +1,32 @@
+public class calc.noSwing.JTextField extends java.lang.Object
+{
+
+    public void setText(java.lang.String)
+    {
+        calc.noSwing.JTextField this;
+        java.lang.String string, temp$2;
+        java.io.PrintStream temp$0;
+        java.lang.StringBuffer temp$1;
+
+        this := @this: calc.noSwing.JTextField;
+        string := @parameter0: java.lang.String;
+        temp$0 = <java.lang.System: java.io.PrintStream out>;
+        temp$1 = new java.lang.StringBuffer;
+        specialinvoke temp$1.<java.lang.StringBuffer: void <init>()>();
+        virtualinvoke temp$1.<java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.Object)>("setText(");
+        virtualinvoke temp$1.<java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.Object)>(string);
+        virtualinvoke temp$1.<java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.Object)>(")");
+        temp$2 = virtualinvoke temp$1.<java.lang.StringBuffer: java.lang.String toString()>();
+        virtualinvoke temp$0.<java.io.PrintStream: void println(java.lang.String)>(temp$2);
+        return;
+    }
+
+    public void <init>()
+    {
+        calc.noSwing.JTextField this;
+
+        this := @this: calc.noSwing.JTextField;
+        specialinvoke this.<java.lang.Object: void <init>()>();
+        return;
+    }
+}

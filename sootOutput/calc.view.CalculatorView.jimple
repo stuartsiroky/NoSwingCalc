@@ -1,0 +1,441 @@
+public class calc.view.CalculatorView extends calc.view.JFrameView
+{
+    public static final java.lang.String PLUS;
+    public static final java.lang.String MINUS;
+    public static final java.lang.String CLEAR;
+    public static final java.lang.String EQUALS;
+    public static int fake_state;
+    private calc.noSwing.JTextField textField;
+    public calc.noSwing.JButton jButton1;
+    public calc.noSwing.JButton jButton2;
+    public calc.noSwing.JButton jButton3;
+    public calc.noSwing.JButton jButton4;
+    public calc.noSwing.JButton jButton5;
+    public calc.noSwing.JButton jButton6;
+    public calc.noSwing.JButton jButton7;
+    public calc.noSwing.JButton jButton8;
+    public calc.noSwing.JButton jButton9;
+    public calc.noSwing.JButton jButton0;
+    public calc.noSwing.JButton minusButton;
+    public calc.noSwing.JButton plusButton;
+    public calc.noSwing.JButton clearButton;
+    public calc.noSwing.JButton equalsButton;
+    public calc.view.CalculatorView$Handler handler;
+
+    static void <clinit>()
+    {
+        java.lang.String temp$0, temp$1, temp$2, temp$3;
+        int temp$4;
+
+        temp$0 = "+";
+        <calc.view.CalculatorView: java.lang.String PLUS> = temp$0;
+        temp$1 = "-";
+        <calc.view.CalculatorView: java.lang.String MINUS> = temp$1;
+        temp$2 = "Clr";
+        <calc.view.CalculatorView: java.lang.String CLEAR> = temp$2;
+        temp$3 = "=";
+        <calc.view.CalculatorView: java.lang.String EQUALS> = temp$3;
+        temp$4 = 0;
+        <calc.view.CalculatorView: int fake_state> = temp$4;
+        return;
+    }
+
+    public void <init>(calc.model.CalculatorModel, calc.controller.CalculatorController)
+    {
+        calc.view.CalculatorView this;
+        calc.model.CalculatorModel model;
+        calc.controller.CalculatorController controller;
+        calc.noSwing.JTextField temp$0, temp$17, temp$19;
+        calc.noSwing.JButton temp$1, temp$2, temp$3, temp$4, temp$5, temp$6, temp$7, temp$8, temp$9, temp$10, temp$11, temp$12, temp$13, temp$14, temp$22, temp$24, temp$26, temp$28, temp$30, temp$32, temp$34, temp$36, temp$38, temp$40, temp$42, temp$44, temp$46, temp$48, temp$53, temp$54, temp$55, temp$56, temp$57, temp$58, temp$59, temp$60, temp$61, temp$62, temp$63, temp$64, temp$65, temp$66;
+        calc.view.CalculatorView$Handler temp$15, temp$23, temp$25, temp$27, temp$29, temp$31, temp$33, temp$35, temp$37, temp$39, temp$41, temp$43, temp$45, temp$47, temp$49;
+        java.io.PrintStream temp$16;
+        calc.noSwing.Container temp$18, temp$51;
+        java.lang.String temp$20, temp$52;
+        calc.noSwing.JPanel buttonPanel, temp$21;
+        calc.noSwing.GridLayout temp$50;
+
+        this := @this: calc.view.CalculatorView;
+        model := @parameter0: calc.model.CalculatorModel;
+        controller := @parameter1: calc.controller.CalculatorController;
+        specialinvoke this.<calc.view.JFrameView: void <init>(calc.model.Model,calc.controller.Controller)>(model, controller);
+        temp$0 = new calc.noSwing.JTextField;
+        specialinvoke temp$0.<calc.noSwing.JTextField: void <init>()>();
+        this.<calc.view.CalculatorView: calc.noSwing.JTextField textField> = temp$0;
+        temp$1 = new calc.noSwing.JButton;
+        specialinvoke temp$1.<calc.noSwing.JButton: void <init>(java.lang.String)>("1");
+        this.<calc.view.CalculatorView: calc.noSwing.JButton jButton1> = temp$1;
+        temp$2 = new calc.noSwing.JButton;
+        specialinvoke temp$2.<calc.noSwing.JButton: void <init>(java.lang.String)>("2");
+        this.<calc.view.CalculatorView: calc.noSwing.JButton jButton2> = temp$2;
+        temp$3 = new calc.noSwing.JButton;
+        specialinvoke temp$3.<calc.noSwing.JButton: void <init>(java.lang.String)>("3");
+        this.<calc.view.CalculatorView: calc.noSwing.JButton jButton3> = temp$3;
+        temp$4 = new calc.noSwing.JButton;
+        specialinvoke temp$4.<calc.noSwing.JButton: void <init>(java.lang.String)>("4");
+        this.<calc.view.CalculatorView: calc.noSwing.JButton jButton4> = temp$4;
+        temp$5 = new calc.noSwing.JButton;
+        specialinvoke temp$5.<calc.noSwing.JButton: void <init>(java.lang.String)>("5");
+        this.<calc.view.CalculatorView: calc.noSwing.JButton jButton5> = temp$5;
+        temp$6 = new calc.noSwing.JButton;
+        specialinvoke temp$6.<calc.noSwing.JButton: void <init>(java.lang.String)>("6");
+        this.<calc.view.CalculatorView: calc.noSwing.JButton jButton6> = temp$6;
+        temp$7 = new calc.noSwing.JButton;
+        specialinvoke temp$7.<calc.noSwing.JButton: void <init>(java.lang.String)>("7");
+        this.<calc.view.CalculatorView: calc.noSwing.JButton jButton7> = temp$7;
+        temp$8 = new calc.noSwing.JButton;
+        specialinvoke temp$8.<calc.noSwing.JButton: void <init>(java.lang.String)>("8");
+        this.<calc.view.CalculatorView: calc.noSwing.JButton jButton8> = temp$8;
+        temp$9 = new calc.noSwing.JButton;
+        specialinvoke temp$9.<calc.noSwing.JButton: void <init>(java.lang.String)>("9");
+        this.<calc.view.CalculatorView: calc.noSwing.JButton jButton9> = temp$9;
+        temp$10 = new calc.noSwing.JButton;
+        specialinvoke temp$10.<calc.noSwing.JButton: void <init>(java.lang.String)>("0");
+        this.<calc.view.CalculatorView: calc.noSwing.JButton jButton0> = temp$10;
+        temp$11 = new calc.noSwing.JButton;
+        specialinvoke temp$11.<calc.noSwing.JButton: void <init>(java.lang.String)>("-");
+        this.<calc.view.CalculatorView: calc.noSwing.JButton minusButton> = temp$11;
+        temp$12 = new calc.noSwing.JButton;
+        specialinvoke temp$12.<calc.noSwing.JButton: void <init>(java.lang.String)>("+");
+        this.<calc.view.CalculatorView: calc.noSwing.JButton plusButton> = temp$12;
+        temp$13 = new calc.noSwing.JButton;
+        specialinvoke temp$13.<calc.noSwing.JButton: void <init>(java.lang.String)>("Clr");
+        this.<calc.view.CalculatorView: calc.noSwing.JButton clearButton> = temp$13;
+        temp$14 = new calc.noSwing.JButton;
+        specialinvoke temp$14.<calc.noSwing.JButton: void <init>(java.lang.String)>("=");
+        this.<calc.view.CalculatorView: calc.noSwing.JButton equalsButton> = temp$14;
+        temp$15 = new calc.view.CalculatorView$Handler;
+        specialinvoke temp$15.<calc.view.CalculatorView$Handler: void <init>(calc.view.CalculatorView)>(this);
+        this.<calc.view.CalculatorView: calc.view.CalculatorView$Handler handler> = temp$15;
+        temp$16 = <java.lang.System: java.io.PrintStream out>;
+        virtualinvoke temp$16.<java.io.PrintStream: void println(java.lang.String)>("Initial");
+        temp$17 = this.<calc.view.CalculatorView: calc.noSwing.JTextField textField>;
+        virtualinvoke temp$17.<calc.noSwing.JTextField: void setText(java.lang.String)>("0");
+        temp$18 = virtualinvoke this.<calc.view.CalculatorView: calc.noSwing.Container getContentPane()>();
+        temp$19 = this.<calc.view.CalculatorView: calc.noSwing.JTextField textField>;
+        temp$20 = <calc.noSwing.BorderLayout: java.lang.String NORTH>;
+        virtualinvoke temp$18.<calc.noSwing.Container: void add(calc.noSwing.JTextField,java.lang.String)>(temp$19, temp$20);
+        temp$21 = new calc.noSwing.JPanel;
+        specialinvoke temp$21.<calc.noSwing.JPanel: void <init>()>();
+        buttonPanel = temp$21;
+        temp$22 = this.<calc.view.CalculatorView: calc.noSwing.JButton jButton1>;
+        temp$23 = this.<calc.view.CalculatorView: calc.view.CalculatorView$Handler handler>;
+        virtualinvoke temp$22.<calc.noSwing.JButton: void addActionListener(calc.noSwing.ActionListener)>(temp$23);
+        temp$24 = this.<calc.view.CalculatorView: calc.noSwing.JButton jButton2>;
+        temp$25 = this.<calc.view.CalculatorView: calc.view.CalculatorView$Handler handler>;
+        virtualinvoke temp$24.<calc.noSwing.JButton: void addActionListener(calc.noSwing.ActionListener)>(temp$25);
+        temp$26 = this.<calc.view.CalculatorView: calc.noSwing.JButton jButton3>;
+        temp$27 = this.<calc.view.CalculatorView: calc.view.CalculatorView$Handler handler>;
+        virtualinvoke temp$26.<calc.noSwing.JButton: void addActionListener(calc.noSwing.ActionListener)>(temp$27);
+        temp$28 = this.<calc.view.CalculatorView: calc.noSwing.JButton jButton4>;
+        temp$29 = this.<calc.view.CalculatorView: calc.view.CalculatorView$Handler handler>;
+        virtualinvoke temp$28.<calc.noSwing.JButton: void addActionListener(calc.noSwing.ActionListener)>(temp$29);
+        temp$30 = this.<calc.view.CalculatorView: calc.noSwing.JButton jButton5>;
+        temp$31 = this.<calc.view.CalculatorView: calc.view.CalculatorView$Handler handler>;
+        virtualinvoke temp$30.<calc.noSwing.JButton: void addActionListener(calc.noSwing.ActionListener)>(temp$31);
+        temp$32 = this.<calc.view.CalculatorView: calc.noSwing.JButton jButton6>;
+        temp$33 = this.<calc.view.CalculatorView: calc.view.CalculatorView$Handler handler>;
+        virtualinvoke temp$32.<calc.noSwing.JButton: void addActionListener(calc.noSwing.ActionListener)>(temp$33);
+        temp$34 = this.<calc.view.CalculatorView: calc.noSwing.JButton jButton7>;
+        temp$35 = this.<calc.view.CalculatorView: calc.view.CalculatorView$Handler handler>;
+        virtualinvoke temp$34.<calc.noSwing.JButton: void addActionListener(calc.noSwing.ActionListener)>(temp$35);
+        temp$36 = this.<calc.view.CalculatorView: calc.noSwing.JButton jButton8>;
+        temp$37 = this.<calc.view.CalculatorView: calc.view.CalculatorView$Handler handler>;
+        virtualinvoke temp$36.<calc.noSwing.JButton: void addActionListener(calc.noSwing.ActionListener)>(temp$37);
+        temp$38 = this.<calc.view.CalculatorView: calc.noSwing.JButton jButton9>;
+        temp$39 = this.<calc.view.CalculatorView: calc.view.CalculatorView$Handler handler>;
+        virtualinvoke temp$38.<calc.noSwing.JButton: void addActionListener(calc.noSwing.ActionListener)>(temp$39);
+        temp$40 = this.<calc.view.CalculatorView: calc.noSwing.JButton jButton0>;
+        temp$41 = this.<calc.view.CalculatorView: calc.view.CalculatorView$Handler handler>;
+        virtualinvoke temp$40.<calc.noSwing.JButton: void addActionListener(calc.noSwing.ActionListener)>(temp$41);
+        temp$42 = this.<calc.view.CalculatorView: calc.noSwing.JButton minusButton>;
+        temp$43 = this.<calc.view.CalculatorView: calc.view.CalculatorView$Handler handler>;
+        virtualinvoke temp$42.<calc.noSwing.JButton: void addActionListener(calc.noSwing.ActionListener)>(temp$43);
+        temp$44 = this.<calc.view.CalculatorView: calc.noSwing.JButton plusButton>;
+        temp$45 = this.<calc.view.CalculatorView: calc.view.CalculatorView$Handler handler>;
+        virtualinvoke temp$44.<calc.noSwing.JButton: void addActionListener(calc.noSwing.ActionListener)>(temp$45);
+        temp$46 = this.<calc.view.CalculatorView: calc.noSwing.JButton clearButton>;
+        temp$47 = this.<calc.view.CalculatorView: calc.view.CalculatorView$Handler handler>;
+        virtualinvoke temp$46.<calc.noSwing.JButton: void addActionListener(calc.noSwing.ActionListener)>(temp$47);
+        temp$48 = this.<calc.view.CalculatorView: calc.noSwing.JButton equalsButton>;
+        temp$49 = this.<calc.view.CalculatorView: calc.view.CalculatorView$Handler handler>;
+        virtualinvoke temp$48.<calc.noSwing.JButton: void addActionListener(calc.noSwing.ActionListener)>(temp$49);
+        temp$50 = new calc.noSwing.GridLayout;
+        specialinvoke temp$50.<calc.noSwing.GridLayout: void <init>(int,int,int,int)>(4, 4, 5, 5);
+        virtualinvoke buttonPanel.<calc.noSwing.JPanel: void setLayout(calc.noSwing.GridLayout)>(temp$50);
+        temp$51 = virtualinvoke this.<calc.view.CalculatorView: calc.noSwing.Container getContentPane()>();
+        temp$52 = <calc.noSwing.BorderLayout: java.lang.String CENTER>;
+        virtualinvoke temp$51.<calc.noSwing.Container: void add(calc.noSwing.JPanel,java.lang.String)>(buttonPanel, temp$52);
+        temp$53 = this.<calc.view.CalculatorView: calc.noSwing.JButton jButton1>;
+        virtualinvoke buttonPanel.<calc.noSwing.JPanel: void add(calc.noSwing.JButton,java.lang.Object)>(temp$53, null);
+        temp$54 = this.<calc.view.CalculatorView: calc.noSwing.JButton jButton2>;
+        virtualinvoke buttonPanel.<calc.noSwing.JPanel: void add(calc.noSwing.JButton,java.lang.Object)>(temp$54, null);
+        temp$55 = this.<calc.view.CalculatorView: calc.noSwing.JButton jButton3>;
+        virtualinvoke buttonPanel.<calc.noSwing.JPanel: void add(calc.noSwing.JButton,java.lang.Object)>(temp$55, null);
+        temp$56 = this.<calc.view.CalculatorView: calc.noSwing.JButton jButton4>;
+        virtualinvoke buttonPanel.<calc.noSwing.JPanel: void add(calc.noSwing.JButton,java.lang.Object)>(temp$56, null);
+        temp$57 = this.<calc.view.CalculatorView: calc.noSwing.JButton jButton5>;
+        virtualinvoke buttonPanel.<calc.noSwing.JPanel: void add(calc.noSwing.JButton,java.lang.Object)>(temp$57, null);
+        temp$58 = this.<calc.view.CalculatorView: calc.noSwing.JButton jButton6>;
+        virtualinvoke buttonPanel.<calc.noSwing.JPanel: void add(calc.noSwing.JButton,java.lang.Object)>(temp$58, null);
+        temp$59 = this.<calc.view.CalculatorView: calc.noSwing.JButton jButton7>;
+        virtualinvoke buttonPanel.<calc.noSwing.JPanel: void add(calc.noSwing.JButton,java.lang.Object)>(temp$59, null);
+        temp$60 = this.<calc.view.CalculatorView: calc.noSwing.JButton jButton8>;
+        virtualinvoke buttonPanel.<calc.noSwing.JPanel: void add(calc.noSwing.JButton,java.lang.Object)>(temp$60, null);
+        temp$61 = this.<calc.view.CalculatorView: calc.noSwing.JButton jButton9>;
+        virtualinvoke buttonPanel.<calc.noSwing.JPanel: void add(calc.noSwing.JButton,java.lang.Object)>(temp$61, null);
+        temp$62 = this.<calc.view.CalculatorView: calc.noSwing.JButton jButton0>;
+        virtualinvoke buttonPanel.<calc.noSwing.JPanel: void add(calc.noSwing.JButton,java.lang.Object)>(temp$62, null);
+        temp$63 = this.<calc.view.CalculatorView: calc.noSwing.JButton minusButton>;
+        virtualinvoke buttonPanel.<calc.noSwing.JPanel: void add(calc.noSwing.JButton,java.lang.Object)>(temp$63, null);
+        temp$64 = this.<calc.view.CalculatorView: calc.noSwing.JButton plusButton>;
+        virtualinvoke buttonPanel.<calc.noSwing.JPanel: void add(calc.noSwing.JButton,java.lang.Object)>(temp$64, null);
+        temp$65 = this.<calc.view.CalculatorView: calc.noSwing.JButton clearButton>;
+        virtualinvoke buttonPanel.<calc.noSwing.JPanel: void add(calc.noSwing.JButton,java.lang.Object)>(temp$65, null);
+        temp$66 = this.<calc.view.CalculatorView: calc.noSwing.JButton equalsButton>;
+        virtualinvoke buttonPanel.<calc.noSwing.JPanel: void add(calc.noSwing.JButton,java.lang.Object)>(temp$66, null);
+        virtualinvoke this.<calc.view.CalculatorView: void pack()>();
+        return;
+    }
+
+    public void modelChanged(calc.model.ModelEvent)
+    {
+        calc.view.CalculatorView this;
+        calc.model.ModelEvent event;
+        java.lang.String msg, temp$2, temp$6;
+        java.lang.StringBuffer temp$0, temp$5;
+        int temp$1;
+        calc.noSwing.JTextField temp$3;
+        java.io.PrintStream temp$4;
+
+        this := @this: calc.view.CalculatorView;
+        event := @parameter0: calc.model.ModelEvent;
+        temp$0 = new java.lang.StringBuffer;
+        specialinvoke temp$0.<java.lang.StringBuffer: void <init>()>();
+        temp$1 = virtualinvoke event.<calc.model.ModelEvent: int getAmount()>();
+        virtualinvoke temp$0.<java.lang.StringBuffer: java.lang.StringBuffer append(int)>(temp$1);
+        virtualinvoke temp$0.<java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.Object)>("");
+        temp$2 = virtualinvoke temp$0.<java.lang.StringBuffer: java.lang.String toString()>();
+        msg = temp$2;
+        temp$3 = this.<calc.view.CalculatorView: calc.noSwing.JTextField textField>;
+        virtualinvoke temp$3.<calc.noSwing.JTextField: void setText(java.lang.String)>(msg);
+        temp$4 = <java.lang.System: java.io.PrintStream out>;
+        temp$5 = new java.lang.StringBuffer;
+        specialinvoke temp$5.<java.lang.StringBuffer: void <init>()>();
+        virtualinvoke temp$5.<java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.Object)>("modeChanged::msg = ");
+        virtualinvoke temp$5.<java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.Object)>(msg);
+        temp$6 = virtualinvoke temp$5.<java.lang.StringBuffer: java.lang.String toString()>();
+        virtualinvoke temp$4.<java.io.PrintStream: void println(java.lang.String)>(temp$6);
+        return;
+    }
+
+    public static void main(java.lang.String[])
+    {
+        java.lang.String[] args;
+        int a, b;
+        calc.controller.CalculatorController cc, temp$0;
+        calc.view.CalculatorView cv;
+        calc.view.View temp$1;
+
+        args := @parameter0: java.lang.String[];
+        a = 1;
+        b = 3;
+        temp$0 = new calc.controller.CalculatorController;
+        specialinvoke temp$0.<calc.controller.CalculatorController: void <init>()>();
+        cc = temp$0;
+        temp$1 = virtualinvoke cc.<calc.controller.CalculatorController: calc.view.View getView()>();
+        cv = (calc.view.CalculatorView) temp$1;
+        staticinvoke <calc.view.CalculatorView: void start(calc.view.CalculatorView,int,int)>(cv, a, b);
+        return;
+    }
+
+    static void start(calc.view.CalculatorView, int, int)
+    {
+        calc.view.CalculatorView calc;
+        int a, b, temp$0, temp$1, temp$2;
+        calc.noSwing.ActionEvent e, temp$3;
+        calc.view.CalculatorView$Handler temp$4;
+
+        calc := @parameter0: calc.view.CalculatorView;
+        a := @parameter1: int;
+        b := @parameter2: int;
+        if a > b goto label0;
+
+        goto label1;
+
+     label0:
+        nop;
+        temp$0 = 0;
+        <calc.view.CalculatorView: int fake_state> = temp$0;
+        staticinvoke <calc.view.CalculatorView: void addition(calc.view.CalculatorView,int,int)>(calc, a, b);
+        goto label5;
+
+     label1:
+        nop;
+        if a < b goto label2;
+
+        goto label3;
+
+     label2:
+        nop;
+        temp$1 = 0;
+        <calc.view.CalculatorView: int fake_state> = temp$1;
+        staticinvoke <calc.view.CalculatorView: void subtraction(calc.view.CalculatorView,int,int)>(calc, b, a);
+        goto label4;
+
+     label3:
+        nop;
+        temp$2 = 1;
+        <calc.view.CalculatorView: int fake_state> = temp$2;
+        temp$3 = new calc.noSwing.ActionEvent;
+        specialinvoke temp$3.<calc.noSwing.ActionEvent: void <init>(java.lang.Object,int,java.lang.String)>(calc, 101, "101");
+        e = temp$3;
+        temp$4 = calc.<calc.view.CalculatorView: calc.view.CalculatorView$Handler handler>;
+        virtualinvoke temp$4.<calc.view.CalculatorView$Handler: void actionPerformed(calc.noSwing.ActionEvent)>(e);
+
+     label4:
+        nop;
+
+     label5:
+        nop;
+        staticinvoke <calc.view.CalculatorView: void equals(calc.view.CalculatorView)>(calc);
+        return;
+    }
+
+    static void addition(calc.view.CalculatorView, int, int)
+    {
+        calc.view.CalculatorView calc;
+        int a, b;
+        calc.noSwing.JButton temp$0;
+
+        calc := @parameter0: calc.view.CalculatorView;
+        a := @parameter1: int;
+        b := @parameter2: int;
+        staticinvoke <calc.view.CalculatorView: void pickButton(calc.view.CalculatorView,int)>(calc, a);
+        temp$0 = calc.<calc.view.CalculatorView: calc.noSwing.JButton plusButton>;
+        virtualinvoke temp$0.<calc.noSwing.JButton: void pushed()>();
+        staticinvoke <calc.view.CalculatorView: void pickButton(calc.view.CalculatorView,int)>(calc, b);
+        return;
+    }
+
+    static void subtraction(calc.view.CalculatorView, int, int)
+    {
+        calc.view.CalculatorView calc;
+        int a, b;
+        calc.noSwing.JButton temp$0;
+
+        calc := @parameter0: calc.view.CalculatorView;
+        a := @parameter1: int;
+        b := @parameter2: int;
+        staticinvoke <calc.view.CalculatorView: void pickButton(calc.view.CalculatorView,int)>(calc, b);
+        temp$0 = calc.<calc.view.CalculatorView: calc.noSwing.JButton minusButton>;
+        virtualinvoke temp$0.<calc.noSwing.JButton: void pushed()>();
+        staticinvoke <calc.view.CalculatorView: void pickButton(calc.view.CalculatorView,int)>(calc, a);
+        return;
+    }
+
+    static void equals(calc.view.CalculatorView)
+    {
+        calc.view.CalculatorView calc;
+        calc.noSwing.JButton temp$0;
+
+        calc := @parameter0: calc.view.CalculatorView;
+        temp$0 = calc.<calc.view.CalculatorView: calc.noSwing.JButton equalsButton>;
+        virtualinvoke temp$0.<calc.noSwing.JButton: void pushed()>();
+        return;
+    }
+
+    static void pickButton(calc.view.CalculatorView, int)
+    {
+        calc.view.CalculatorView calc;
+        int val;
+        calc.noSwing.JButton temp$0, temp$1, temp$2, temp$3, temp$4, temp$5, temp$6, temp$7, temp$8, temp$9;
+
+        calc := @parameter0: calc.view.CalculatorView;
+        val := @parameter1: int;
+        goto label10;
+
+     label0:
+        nop;
+        temp$0 = calc.<calc.view.CalculatorView: calc.noSwing.JButton jButton0>;
+        virtualinvoke temp$0.<calc.noSwing.JButton: void pushed()>();
+        goto label11;
+
+     label1:
+        nop;
+        temp$1 = calc.<calc.view.CalculatorView: calc.noSwing.JButton jButton1>;
+        virtualinvoke temp$1.<calc.noSwing.JButton: void pushed()>();
+        goto label11;
+
+     label2:
+        nop;
+        temp$2 = calc.<calc.view.CalculatorView: calc.noSwing.JButton jButton2>;
+        virtualinvoke temp$2.<calc.noSwing.JButton: void pushed()>();
+        goto label11;
+
+     label3:
+        nop;
+        temp$3 = calc.<calc.view.CalculatorView: calc.noSwing.JButton jButton3>;
+        virtualinvoke temp$3.<calc.noSwing.JButton: void pushed()>();
+        goto label11;
+
+     label4:
+        nop;
+        temp$4 = calc.<calc.view.CalculatorView: calc.noSwing.JButton jButton4>;
+        virtualinvoke temp$4.<calc.noSwing.JButton: void pushed()>();
+        goto label11;
+
+     label5:
+        nop;
+        temp$5 = calc.<calc.view.CalculatorView: calc.noSwing.JButton jButton5>;
+        virtualinvoke temp$5.<calc.noSwing.JButton: void pushed()>();
+        goto label11;
+
+     label6:
+        nop;
+        temp$6 = calc.<calc.view.CalculatorView: calc.noSwing.JButton jButton6>;
+        virtualinvoke temp$6.<calc.noSwing.JButton: void pushed()>();
+        goto label11;
+
+     label7:
+        nop;
+        temp$7 = calc.<calc.view.CalculatorView: calc.noSwing.JButton jButton7>;
+        virtualinvoke temp$7.<calc.noSwing.JButton: void pushed()>();
+        goto label11;
+
+     label8:
+        nop;
+        temp$8 = calc.<calc.view.CalculatorView: calc.noSwing.JButton jButton8>;
+        virtualinvoke temp$8.<calc.noSwing.JButton: void pushed()>();
+        goto label11;
+
+     label9:
+        nop;
+        temp$9 = calc.<calc.view.CalculatorView: calc.noSwing.JButton jButton9>;
+        virtualinvoke temp$9.<calc.noSwing.JButton: void pushed()>();
+        goto label11;
+
+        goto label11;
+
+     label10:
+        nop;
+        nop;
+        tableswitch(val)
+        {
+            case 0: goto label0;
+            case 1: goto label1;
+            case 2: goto label2;
+            case 3: goto label3;
+            case 4: goto label4;
+            case 5: goto label5;
+            case 6: goto label6;
+            case 7: goto label7;
+            case 8: goto label8;
+            case 9: goto label9;
+            default: goto label11;
+        };
+
+     label11:
+        nop;
+        return;
+    }
+}

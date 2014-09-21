@@ -1,0 +1,30 @@
+public class calc.noSwing.ActionEvent extends java.lang.Object
+{
+    private java.lang.String msg;
+
+    public void <init>(java.lang.Object, int, java.lang.String)
+    {
+        calc.noSwing.ActionEvent this;
+        java.lang.Object obj;
+        int id;
+        java.lang.String message;
+
+        this := @this: calc.noSwing.ActionEvent;
+        obj := @parameter0: java.lang.Object;
+        id := @parameter1: int;
+        message := @parameter2: java.lang.String;
+        specialinvoke this.<java.lang.Object: void <init>()>();
+        this.<calc.noSwing.ActionEvent: java.lang.String msg> = message;
+        return;
+    }
+
+    public java.lang.String getActionCommand()
+    {
+        calc.noSwing.ActionEvent this;
+        java.lang.String temp$0;
+
+        this := @this: calc.noSwing.ActionEvent;
+        temp$0 = this.<calc.noSwing.ActionEvent: java.lang.String msg>;
+        return temp$0;
+    }
+}
