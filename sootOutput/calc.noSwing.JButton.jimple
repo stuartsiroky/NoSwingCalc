@@ -5,41 +5,41 @@ public class calc.noSwing.JButton extends java.lang.Object
 
     public void <init>(java.lang.String)
     {
-        calc.noSwing.JButton this;
-        java.lang.String string;
+        calc.noSwing.JButton r0;
+        java.lang.String r1;
 
-        this := @this: calc.noSwing.JButton;
-        string := @parameter0: java.lang.String;
-        specialinvoke this.<java.lang.Object: void <init>()>();
-        this.<calc.noSwing.JButton: java.lang.String str> = string;
+        r0 := @this: calc.noSwing.JButton;
+        r1 := @parameter0: java.lang.String;
+        specialinvoke r0.<java.lang.Object: void <init>()>();
+        r0.<calc.noSwing.JButton: java.lang.String str> = r1;
         return;
     }
 
     public void addActionListener(calc.noSwing.ActionListener)
     {
-        calc.noSwing.JButton this;
-        calc.noSwing.ActionListener handler;
+        calc.noSwing.JButton r0;
+        calc.noSwing.ActionListener r1;
 
-        this := @this: calc.noSwing.JButton;
-        handler := @parameter0: calc.noSwing.ActionListener;
-        this.<calc.noSwing.JButton: calc.noSwing.ActionListener hdlr> = handler;
+        r0 := @this: calc.noSwing.JButton;
+        r1 := @parameter0: calc.noSwing.ActionListener;
+        r0.<calc.noSwing.JButton: calc.noSwing.ActionListener hdlr> = r1;
         return;
     }
 
     public void pushed()
     {
-        calc.noSwing.JButton this;
-        calc.noSwing.ActionEvent e, temp$0;
-        java.lang.String temp$1;
-        calc.noSwing.ActionListener temp$2;
+        calc.noSwing.JButton r0;
+        calc.noSwing.ActionEvent $r1, r2;
+        java.lang.String $r3;
+        calc.noSwing.ActionListener $r4;
 
-        this := @this: calc.noSwing.JButton;
-        temp$0 = new calc.noSwing.ActionEvent;
-        temp$1 = this.<calc.noSwing.JButton: java.lang.String str>;
-        specialinvoke temp$0.<calc.noSwing.ActionEvent: void <init>(java.lang.Object,int,java.lang.String)>(this, 1, temp$1);
-        e = temp$0;
-        temp$2 = this.<calc.noSwing.JButton: calc.noSwing.ActionListener hdlr>;
-        interfaceinvoke temp$2.<calc.noSwing.ActionListener: void actionPerformed(calc.noSwing.ActionEvent)>(e);
+        r0 := @this: calc.noSwing.JButton;
+        $r1 = new calc.noSwing.ActionEvent;
+        $r3 = r0.<calc.noSwing.JButton: java.lang.String str>;
+        specialinvoke $r1.<calc.noSwing.ActionEvent: void <init>(java.lang.Object,int,java.lang.String)>(r0, 1, $r3);
+        r2 = $r1;
+        $r4 = r0.<calc.noSwing.JButton: calc.noSwing.ActionListener hdlr>;
+        interfaceinvoke $r4.<calc.noSwing.ActionListener: void actionPerformed(calc.noSwing.ActionEvent)>(r2);
         return;
     }
 }

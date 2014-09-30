@@ -5,21 +5,17 @@ public class calc.noSwing.BorderLayout extends java.lang.Object
 
     static void <clinit>()
     {
-        java.lang.String temp$0, temp$1;
-
-        temp$0 = null;
-        <calc.noSwing.BorderLayout: java.lang.String CENTER> = temp$0;
-        temp$1 = null;
-        <calc.noSwing.BorderLayout: java.lang.String NORTH> = temp$1;
+        <calc.noSwing.BorderLayout: java.lang.String CENTER> = null;
+        <calc.noSwing.BorderLayout: java.lang.String NORTH> = null;
         return;
     }
 
     public void <init>()
     {
-        calc.noSwing.BorderLayout this;
+        calc.noSwing.BorderLayout r0;
 
-        this := @this: calc.noSwing.BorderLayout;
-        specialinvoke this.<java.lang.Object: void <init>()>();
+        r0 := @this: calc.noSwing.BorderLayout;
+        specialinvoke r0.<java.lang.Object: void <init>()>();
         return;
     }
 }

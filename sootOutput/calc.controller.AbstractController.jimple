@@ -3,54 +3,54 @@ public abstract class calc.controller.AbstractController extends java.lang.Objec
     private calc.view.View view;
     private calc.model.Model model;
 
+    public void <init>()
+    {
+        calc.controller.AbstractController r0;
+
+        r0 := @this: calc.controller.AbstractController;
+        specialinvoke r0.<java.lang.Object: void <init>()>();
+        return;
+    }
+
     public void setModel(calc.model.Model)
     {
-        calc.controller.AbstractController this;
-        calc.model.Model model;
+        calc.controller.AbstractController r0;
+        calc.model.Model r1;
 
-        this := @this: calc.controller.AbstractController;
-        model := @parameter0: calc.model.Model;
-        this.<calc.controller.AbstractController: calc.model.Model model> = model;
+        r0 := @this: calc.controller.AbstractController;
+        r1 := @parameter0: calc.model.Model;
+        r0.<calc.controller.AbstractController: calc.model.Model model> = r1;
         return;
     }
 
     public calc.model.Model getModel()
     {
-        calc.controller.AbstractController this;
-        calc.model.Model temp$0;
+        calc.controller.AbstractController r0;
+        calc.model.Model $r1;
 
-        this := @this: calc.controller.AbstractController;
-        temp$0 = this.<calc.controller.AbstractController: calc.model.Model model>;
-        return temp$0;
+        r0 := @this: calc.controller.AbstractController;
+        $r1 = r0.<calc.controller.AbstractController: calc.model.Model model>;
+        return $r1;
     }
 
     public calc.view.View getView()
     {
-        calc.controller.AbstractController this;
-        calc.view.View temp$0;
+        calc.controller.AbstractController r0;
+        calc.view.View $r1;
 
-        this := @this: calc.controller.AbstractController;
-        temp$0 = this.<calc.controller.AbstractController: calc.view.View view>;
-        return temp$0;
+        r0 := @this: calc.controller.AbstractController;
+        $r1 = r0.<calc.controller.AbstractController: calc.view.View view>;
+        return $r1;
     }
 
     public void setView(calc.view.View)
     {
-        calc.controller.AbstractController this;
-        calc.view.View view;
+        calc.controller.AbstractController r0;
+        calc.view.View r1;
 
-        this := @this: calc.controller.AbstractController;
-        view := @parameter0: calc.view.View;
-        this.<calc.controller.AbstractController: calc.view.View view> = view;
-        return;
-    }
-
-    public void <init>()
-    {
-        calc.controller.AbstractController this;
-
-        this := @this: calc.controller.AbstractController;
-        specialinvoke this.<java.lang.Object: void <init>()>();
+        r0 := @this: calc.controller.AbstractController;
+        r1 := @parameter0: calc.view.View;
+        r0.<calc.controller.AbstractController: calc.view.View view> = r1;
         return;
     }
 }

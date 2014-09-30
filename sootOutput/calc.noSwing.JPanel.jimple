@@ -1,34 +1,34 @@
 public class calc.noSwing.JPanel extends java.lang.Object
 {
 
+    public void <init>()
+    {
+        calc.noSwing.JPanel r0;
+
+        r0 := @this: calc.noSwing.JPanel;
+        specialinvoke r0.<java.lang.Object: void <init>()>();
+        return;
+    }
+
     public void add(calc.noSwing.JButton, java.lang.Object)
     {
-        calc.noSwing.JPanel this;
-        calc.noSwing.JButton jButton1;
-        java.lang.Object object;
+        calc.noSwing.JPanel r0;
+        calc.noSwing.JButton r1;
+        java.lang.Object r2;
 
-        this := @this: calc.noSwing.JPanel;
-        jButton1 := @parameter0: calc.noSwing.JButton;
-        object := @parameter1: java.lang.Object;
+        r0 := @this: calc.noSwing.JPanel;
+        r1 := @parameter0: calc.noSwing.JButton;
+        r2 := @parameter1: java.lang.Object;
         return;
     }
 
     public void setLayout(calc.noSwing.GridLayout)
     {
-        calc.noSwing.JPanel this;
-        calc.noSwing.GridLayout gridLayout;
+        calc.noSwing.JPanel r0;
+        calc.noSwing.GridLayout r1;
 
-        this := @this: calc.noSwing.JPanel;
-        gridLayout := @parameter0: calc.noSwing.GridLayout;
-        return;
-    }
-
-    public void <init>()
-    {
-        calc.noSwing.JPanel this;
-
-        this := @this: calc.noSwing.JPanel;
-        specialinvoke this.<java.lang.Object: void <init>()>();
+        r0 := @this: calc.noSwing.JPanel;
+        r1 := @parameter0: calc.noSwing.GridLayout;
         return;
     }
 }

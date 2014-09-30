@@ -3,15 +3,15 @@ public class calc.noSwing.GridLayout extends java.lang.Object
 
     public void <init>(int, int, int, int)
     {
-        calc.noSwing.GridLayout this;
-        int i, j, k, l;
+        calc.noSwing.GridLayout r0;
+        int i0, i1, i2, i3;
 
-        this := @this: calc.noSwing.GridLayout;
-        i := @parameter0: int;
-        j := @parameter1: int;
-        k := @parameter2: int;
-        l := @parameter3: int;
-        specialinvoke this.<java.lang.Object: void <init>()>();
+        r0 := @this: calc.noSwing.GridLayout;
+        i0 := @parameter0: int;
+        i1 := @parameter1: int;
+        i2 := @parameter2: int;
+        i3 := @parameter3: int;
+        specialinvoke r0.<java.lang.Object: void <init>()>();
         return;
     }
 }

@@ -20,44 +20,4 @@
 <jmpPos sline="6" eline="6" spos="0" epos="0"/>
 <text info="ConstantValue: =" aType="StringConstantValueTag"/>
 </attribute>
-<attribute>
-<srcPos sline="0" eline="0" spos="0" epos="0"/>
-<jmpPos sline="43" eline="43" spos="0" epos="0"/>
-<text info="[model, controller]" aType="ParamNamesTag"/>
-</attribute>
-<attribute>
-<srcPos sline="0" eline="0" spos="0" epos="0"/>
-<jmpPos sline="200" eline="200" spos="0" epos="0"/>
-<text info="[event]" aType="ParamNamesTag"/>
-</attribute>
-<attribute>
-<srcPos sline="0" eline="0" spos="0" epos="0"/>
-<jmpPos sline="231" eline="231" spos="0" epos="0"/>
-<text info="[args]" aType="ParamNamesTag"/>
-</attribute>
-<attribute>
-<srcPos sline="0" eline="0" spos="0" epos="0"/>
-<jmpPos sline="251" eline="251" spos="0" epos="0"/>
-<text info="[calc, a, b]" aType="ParamNamesTag"/>
-</attribute>
-<attribute>
-<srcPos sline="0" eline="0" spos="0" epos="0"/>
-<jmpPos sline="304" eline="304" spos="0" epos="0"/>
-<text info="[calc, a, b]" aType="ParamNamesTag"/>
-</attribute>
-<attribute>
-<srcPos sline="0" eline="0" spos="0" epos="0"/>
-<jmpPos sline="320" eline="320" spos="0" epos="0"/>
-<text info="[calc, a, b]" aType="ParamNamesTag"/>
-</attribute>
-<attribute>
-<srcPos sline="0" eline="0" spos="0" epos="0"/>
-<jmpPos sline="336" eline="336" spos="0" epos="0"/>
-<text info="[calc]" aType="ParamNamesTag"/>
-</attribute>
-<attribute>
-<srcPos sline="0" eline="0" spos="0" epos="0"/>
-<jmpPos sline="347" eline="347" spos="0" epos="0"/>
-<text info="[calc, val]" aType="ParamNamesTag"/>
-</attribute>
 </attributes>

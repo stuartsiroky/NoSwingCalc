@@ -3,21 +3,21 @@ public class calc.model.Digit5 extends java.lang.Exception
 
     public void <init>()
     {
-        calc.model.Digit5 this;
+        calc.model.Digit5 r0;
 
-        this := @this: calc.model.Digit5;
-        specialinvoke this.<java.lang.Exception: void <init>()>();
+        r0 := @this: calc.model.Digit5;
+        specialinvoke r0.<java.lang.Exception: void <init>()>();
         return;
     }
 
     public void <init>(java.lang.String)
     {
-        calc.model.Digit5 this;
-        java.lang.String s;
+        calc.model.Digit5 r0;
+        java.lang.String r1;
 
-        this := @this: calc.model.Digit5;
-        s := @parameter0: java.lang.String;
-        specialinvoke this.<java.lang.Exception: void <init>(java.lang.String)>(s);
+        r0 := @this: calc.model.Digit5;
+        r1 := @parameter0: java.lang.String;
+        specialinvoke r0.<java.lang.Exception: void <init>(java.lang.String)>(r1);
         return;
     }
 }

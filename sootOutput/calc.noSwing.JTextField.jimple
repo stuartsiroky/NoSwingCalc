@@ -1,32 +1,31 @@
 public class calc.noSwing.JTextField extends java.lang.Object
 {
 
-    public void setText(java.lang.String)
+    public void <init>()
     {
-        calc.noSwing.JTextField this;
-        java.lang.String string, temp$2;
-        java.io.PrintStream temp$0;
-        java.lang.StringBuffer temp$1;
+        calc.noSwing.JTextField r0;
 
-        this := @this: calc.noSwing.JTextField;
-        string := @parameter0: java.lang.String;
-        temp$0 = <java.lang.System: java.io.PrintStream out>;
-        temp$1 = new java.lang.StringBuffer;
-        specialinvoke temp$1.<java.lang.StringBuffer: void <init>()>();
-        virtualinvoke temp$1.<java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.Object)>("setText(");
-        virtualinvoke temp$1.<java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.Object)>(string);
-        virtualinvoke temp$1.<java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.Object)>(")");
-        temp$2 = virtualinvoke temp$1.<java.lang.StringBuffer: java.lang.String toString()>();
-        virtualinvoke temp$0.<java.io.PrintStream: void println(java.lang.String)>(temp$2);
+        r0 := @this: calc.noSwing.JTextField;
+        specialinvoke r0.<java.lang.Object: void <init>()>();
         return;
     }
 
-    public void <init>()
+    public void setText(java.lang.String)
     {
-        calc.noSwing.JTextField this;
+        calc.noSwing.JTextField r0;
+        java.lang.String r1, $r6;
+        java.io.PrintStream $r2;
+        java.lang.StringBuilder $r3, $r4, $r5;
 
-        this := @this: calc.noSwing.JTextField;
-        specialinvoke this.<java.lang.Object: void <init>()>();
+        r0 := @this: calc.noSwing.JTextField;
+        r1 := @parameter0: java.lang.String;
+        $r2 = <java.lang.System: java.io.PrintStream out>;
+        $r3 = new java.lang.StringBuilder;
+        specialinvoke $r3.<java.lang.StringBuilder: void <init>(java.lang.String)>("setText(");
+        $r4 = virtualinvoke $r3.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>(r1);
+        $r5 = virtualinvoke $r4.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>(")");
+        $r6 = virtualinvoke $r5.<java.lang.StringBuilder: java.lang.String toString()>();
+        virtualinvoke $r2.<java.io.PrintStream: void println(java.lang.String)>($r6);
         return;
     }
 }

@@ -1,36 +1,36 @@
 public class calc.noSwing.Container extends java.lang.Object
 {
 
+    public void <init>()
+    {
+        calc.noSwing.Container r0;
+
+        r0 := @this: calc.noSwing.Container;
+        specialinvoke r0.<java.lang.Object: void <init>()>();
+        return;
+    }
+
     public void add(calc.noSwing.JTextField, java.lang.String)
     {
-        calc.noSwing.Container this;
-        calc.noSwing.JTextField textField;
-        java.lang.String north;
+        calc.noSwing.Container r0;
+        calc.noSwing.JTextField r1;
+        java.lang.String r2;
 
-        this := @this: calc.noSwing.Container;
-        textField := @parameter0: calc.noSwing.JTextField;
-        north := @parameter1: java.lang.String;
+        r0 := @this: calc.noSwing.Container;
+        r1 := @parameter0: calc.noSwing.JTextField;
+        r2 := @parameter1: java.lang.String;
         return;
     }
 
     public void add(calc.noSwing.JPanel, java.lang.String)
     {
-        calc.noSwing.Container this;
-        calc.noSwing.JPanel buttonPanel;
-        java.lang.String center;
+        calc.noSwing.Container r0;
+        calc.noSwing.JPanel r1;
+        java.lang.String r2;
 
-        this := @this: calc.noSwing.Container;
-        buttonPanel := @parameter0: calc.noSwing.JPanel;
-        center := @parameter1: java.lang.String;
-        return;
-    }
-
-    public void <init>()
-    {
-        calc.noSwing.Container this;
-
-        this := @this: calc.noSwing.Container;
-        specialinvoke this.<java.lang.Object: void <init>()>();
+        r0 := @this: calc.noSwing.Container;
+        r1 := @parameter0: calc.noSwing.JPanel;
+        r2 := @parameter1: java.lang.String;
         return;
     }
 }

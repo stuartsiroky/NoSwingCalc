@@ -4,156 +4,137 @@ public class calc.model.CalculatorModel extends calc.model.AbstractModel
     private int current;
     private java.lang.String state;
 
+    public void <init>()
+    {
+        calc.model.CalculatorModel r0;
+
+        r0 := @this: calc.model.CalculatorModel;
+        specialinvoke r0.<calc.model.AbstractModel: void <init>()>();
+        r0.<calc.model.CalculatorModel: int total> = 0;
+        r0.<calc.model.CalculatorModel: int current> = 0;
+        r0.<calc.model.CalculatorModel: java.lang.String state> = "add";
+        return;
+    }
+
     public void clear()
     {
-        calc.model.CalculatorModel this;
-        int temp$0;
+        calc.model.CalculatorModel r0;
 
-        this := @this: calc.model.CalculatorModel;
-        temp$0 = 0;
-        this.<calc.model.CalculatorModel: int total> = temp$0;
-        virtualinvoke this.<calc.model.CalculatorModel: void store(int)>(0);
+        r0 := @this: calc.model.CalculatorModel;
+        r0.<calc.model.CalculatorModel: int total> = 0;
+        virtualinvoke r0.<calc.model.CalculatorModel: void store(int)>(0);
         return;
     }
 
     public void store(int)
     {
-        calc.model.CalculatorModel this;
-        int value, temp$1;
-        calc.model.ModelEvent me, temp$0;
-        java.io.PrintStream temp$2;
-        java.lang.StringBuffer temp$3;
-        java.lang.String temp$4;
+        calc.model.CalculatorModel r0;
+        int i0, $i1;
+        calc.model.ModelEvent r1, $r2;
+        java.io.PrintStream $r3;
+        java.lang.StringBuilder $r4, $r5;
+        java.lang.String $r6;
 
-        this := @this: calc.model.CalculatorModel;
-        value := @parameter0: int;
-        this.<calc.model.CalculatorModel: int current> = value;
-        temp$0 = new calc.model.ModelEvent;
-        temp$1 = this.<calc.model.CalculatorModel: int current>;
-        specialinvoke temp$0.<calc.model.ModelEvent: void <init>(java.lang.Object,int,java.lang.String,int)>(this, 1, "", temp$1);
-        me = temp$0;
-        temp$2 = <java.lang.System: java.io.PrintStream out>;
-        temp$3 = new java.lang.StringBuffer;
-        specialinvoke temp$3.<java.lang.StringBuffer: void <init>()>();
-        virtualinvoke temp$3.<java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.Object)>("model.store::");
-        virtualinvoke temp$3.<java.lang.StringBuffer: java.lang.StringBuffer append(int)>(value);
-        temp$4 = virtualinvoke temp$3.<java.lang.StringBuffer: java.lang.String toString()>();
-        virtualinvoke temp$2.<java.io.PrintStream: void println(java.lang.String)>(temp$4);
-        virtualinvoke this.<calc.model.CalculatorModel: void notifyChanged(calc.model.ModelEvent)>(me);
+        r0 := @this: calc.model.CalculatorModel;
+        i0 := @parameter0: int;
+        r0.<calc.model.CalculatorModel: int current> = i0;
+        $r2 = new calc.model.ModelEvent;
+        $i1 = r0.<calc.model.CalculatorModel: int current>;
+        specialinvoke $r2.<calc.model.ModelEvent: void <init>(java.lang.Object,int,java.lang.String,int)>(r0, 1, "", $i1);
+        r1 = $r2;
+        $r3 = <java.lang.System: java.io.PrintStream out>;
+        $r4 = new java.lang.StringBuilder;
+        specialinvoke $r4.<java.lang.StringBuilder: void <init>(java.lang.String)>("model.store::");
+        $r5 = virtualinvoke $r4.<java.lang.StringBuilder: java.lang.StringBuilder append(int)>(i0);
+        $r6 = virtualinvoke $r5.<java.lang.StringBuilder: java.lang.String toString()>();
+        virtualinvoke $r3.<java.io.PrintStream: void println(java.lang.String)>($r6);
+        virtualinvoke r0.<calc.model.CalculatorModel: void notifyChanged(calc.model.ModelEvent)>(r1);
         return;
     }
 
     public void add()
     {
-        calc.model.CalculatorModel this;
-        java.lang.String temp$0;
-        int temp$1;
-        java.io.PrintStream temp$2;
+        calc.model.CalculatorModel r0;
+        int $i0;
+        java.io.PrintStream $r1;
 
-        this := @this: calc.model.CalculatorModel;
-        temp$0 = "add";
-        this.<calc.model.CalculatorModel: java.lang.String state> = temp$0;
-        temp$1 = this.<calc.model.CalculatorModel: int current>;
-        this.<calc.model.CalculatorModel: int total> = temp$1;
-        temp$2 = <java.lang.System: java.io.PrintStream out>;
-        virtualinvoke temp$2.<java.io.PrintStream: void println(java.lang.String)>("STUART CalculatorModel.add");
+        r0 := @this: calc.model.CalculatorModel;
+        r0.<calc.model.CalculatorModel: java.lang.String state> = "add";
+        $i0 = r0.<calc.model.CalculatorModel: int current>;
+        r0.<calc.model.CalculatorModel: int total> = $i0;
+        $r1 = <java.lang.System: java.io.PrintStream out>;
+        virtualinvoke $r1.<java.io.PrintStream: void println(java.lang.String)>("STUART CalculatorModel.add");
         return;
     }
 
     public void subtract()
     {
-        calc.model.CalculatorModel this;
-        java.lang.String temp$0;
-        int temp$1;
-        java.io.PrintStream temp$2;
+        calc.model.CalculatorModel r0;
+        int $i0;
+        java.io.PrintStream $r1;
 
-        this := @this: calc.model.CalculatorModel;
-        temp$0 = "subtract";
-        this.<calc.model.CalculatorModel: java.lang.String state> = temp$0;
-        temp$1 = this.<calc.model.CalculatorModel: int current>;
-        this.<calc.model.CalculatorModel: int total> = temp$1;
-        temp$2 = <java.lang.System: java.io.PrintStream out>;
-        virtualinvoke temp$2.<java.io.PrintStream: void println(java.lang.String)>("STUART CalculatorModel.subtract");
+        r0 := @this: calc.model.CalculatorModel;
+        r0.<calc.model.CalculatorModel: java.lang.String state> = "subtract";
+        $i0 = r0.<calc.model.CalculatorModel: int current>;
+        r0.<calc.model.CalculatorModel: int total> = $i0;
+        $r1 = <java.lang.System: java.io.PrintStream out>;
+        virtualinvoke $r1.<java.io.PrintStream: void println(java.lang.String)>("STUART CalculatorModel.subtract");
         return;
     }
 
     public void equals()
     {
-        calc.model.CalculatorModel this;
-        java.lang.String temp$0, temp$12, temp$14;
-        int temp$1, temp$2, temp$3, temp$4, temp$5, temp$6, temp$7, temp$9, temp$13;
-        calc.model.ModelEvent me, temp$8;
-        java.io.PrintStream temp$10;
-        java.lang.StringBuffer temp$11;
+        calc.model.CalculatorModel r0;
+        calc.model.ModelEvent r1, $r5;
+        java.lang.String $r2, $r8, $r12;
+        int $i0, $i1, $i2, $i3, $i4, $i5, $i6, $i7, $i8;
+        java.io.PrintStream $r6;
+        java.lang.StringBuilder $r7, $r9, $r10, $r11;
 
-        this := @this: calc.model.CalculatorModel;
-        temp$0 = this.<calc.model.CalculatorModel: java.lang.String state>;
-        if temp$0 == "add" goto label0;
+        r0 := @this: calc.model.CalculatorModel;
+        $r2 = r0.<calc.model.CalculatorModel: java.lang.String state>;
+        if $r2 != "add" goto label0;
 
+        $i0 = r0.<calc.model.CalculatorModel: int total>;
+        $i1 = r0.<calc.model.CalculatorModel: int current>;
+        $i2 = $i0 + $i1;
+        r0.<calc.model.CalculatorModel: int total> = $i2;
         goto label1;
 
      label0:
-        nop;
-        temp$1 = this.<calc.model.CalculatorModel: int total>;
-        temp$2 = this.<calc.model.CalculatorModel: int current>;
-        temp$3 = temp$1 + temp$2;
-        this.<calc.model.CalculatorModel: int total> = temp$3;
-        goto label2;
+        $i3 = r0.<calc.model.CalculatorModel: int total>;
+        $i4 = r0.<calc.model.CalculatorModel: int current>;
+        $i5 = $i3 - $i4;
+        r0.<calc.model.CalculatorModel: int total> = $i5;
 
      label1:
-        nop;
-        temp$4 = this.<calc.model.CalculatorModel: int total>;
-        temp$5 = this.<calc.model.CalculatorModel: int current>;
-        temp$6 = temp$4 - temp$5;
-        this.<calc.model.CalculatorModel: int total> = temp$6;
-
-     label2:
-        nop;
-        temp$7 = this.<calc.model.CalculatorModel: int total>;
-        this.<calc.model.CalculatorModel: int current> = temp$7;
-        temp$8 = new calc.model.ModelEvent;
-        temp$9 = this.<calc.model.CalculatorModel: int total>;
-        specialinvoke temp$8.<calc.model.ModelEvent: void <init>(java.lang.Object,int,java.lang.String,int)>(this, 1, "", temp$9);
-        me = temp$8;
-        temp$10 = <java.lang.System: java.io.PrintStream out>;
-        temp$11 = new java.lang.StringBuffer;
-        specialinvoke temp$11.<java.lang.StringBuffer: void <init>()>();
-        virtualinvoke temp$11.<java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.Object)>("model.equals:: state = ");
-        temp$12 = this.<calc.model.CalculatorModel: java.lang.String state>;
-        virtualinvoke temp$11.<java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.Object)>(temp$12);
-        virtualinvoke temp$11.<java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.Object)>(" total = ");
-        temp$13 = this.<calc.model.CalculatorModel: int current>;
-        virtualinvoke temp$11.<java.lang.StringBuffer: java.lang.StringBuffer append(int)>(temp$13);
-        temp$14 = virtualinvoke temp$11.<java.lang.StringBuffer: java.lang.String toString()>();
-        virtualinvoke temp$10.<java.io.PrintStream: void println(java.lang.String)>(temp$14);
-        virtualinvoke this.<calc.model.CalculatorModel: void notifyChanged(calc.model.ModelEvent)>(me);
+        $i6 = r0.<calc.model.CalculatorModel: int total>;
+        r0.<calc.model.CalculatorModel: int current> = $i6;
+        $r5 = new calc.model.ModelEvent;
+        $i7 = r0.<calc.model.CalculatorModel: int total>;
+        specialinvoke $r5.<calc.model.ModelEvent: void <init>(java.lang.Object,int,java.lang.String,int)>(r0, 1, "", $i7);
+        r1 = $r5;
+        $r6 = <java.lang.System: java.io.PrintStream out>;
+        $r7 = new java.lang.StringBuilder;
+        specialinvoke $r7.<java.lang.StringBuilder: void <init>(java.lang.String)>("model.equals:: state = ");
+        $r8 = r0.<calc.model.CalculatorModel: java.lang.String state>;
+        $r9 = virtualinvoke $r7.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>($r8);
+        $r10 = virtualinvoke $r9.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>(" total = ");
+        $i8 = r0.<calc.model.CalculatorModel: int current>;
+        $r11 = virtualinvoke $r10.<java.lang.StringBuilder: java.lang.StringBuilder append(int)>($i8);
+        $r12 = virtualinvoke $r11.<java.lang.StringBuilder: java.lang.String toString()>();
+        virtualinvoke $r6.<java.io.PrintStream: void println(java.lang.String)>($r12);
+        virtualinvoke r0.<calc.model.CalculatorModel: void notifyChanged(calc.model.ModelEvent)>(r1);
         return;
     }
 
     public int getTotal()
     {
-        calc.model.CalculatorModel this;
-        int temp$0;
+        calc.model.CalculatorModel r0;
+        int $i0;
 
-        this := @this: calc.model.CalculatorModel;
-        temp$0 = this.<calc.model.CalculatorModel: int total>;
-        return temp$0;
-    }
-
-    public void <init>()
-    {
-        calc.model.CalculatorModel this;
-        int temp$0, temp$1;
-        java.lang.String temp$2;
-
-        this := @this: calc.model.CalculatorModel;
-        specialinvoke this.<calc.model.AbstractModel: void <init>()>();
-        temp$0 = 0;
-        this.<calc.model.CalculatorModel: int total> = temp$0;
-        temp$1 = 0;
-        this.<calc.model.CalculatorModel: int current> = temp$1;
-        temp$2 = "add";
-        this.<calc.model.CalculatorModel: java.lang.String state> = temp$2;
-        return;
+        r0 := @this: calc.model.CalculatorModel;
+        $i0 = r0.<calc.model.CalculatorModel: int total>;
+        return $i0;
     }
 }

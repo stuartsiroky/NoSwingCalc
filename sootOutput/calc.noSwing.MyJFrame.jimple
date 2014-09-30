@@ -1,41 +1,41 @@
 public class calc.noSwing.MyJFrame extends java.lang.Object
 {
 
+    public void <init>()
+    {
+        calc.noSwing.MyJFrame r0;
+
+        r0 := @this: calc.noSwing.MyJFrame;
+        specialinvoke r0.<java.lang.Object: void <init>()>();
+        return;
+    }
+
     public void pack()
     {
-        calc.noSwing.MyJFrame this;
+        calc.noSwing.MyJFrame r0;
 
-        this := @this: calc.noSwing.MyJFrame;
+        r0 := @this: calc.noSwing.MyJFrame;
         return;
     }
 
     public calc.noSwing.Container getContentPane()
     {
-        calc.noSwing.MyJFrame this;
-        calc.noSwing.Container temp$0;
+        calc.noSwing.MyJFrame r0;
+        calc.noSwing.Container $r1;
 
-        this := @this: calc.noSwing.MyJFrame;
-        temp$0 = new calc.noSwing.Container;
-        specialinvoke temp$0.<calc.noSwing.Container: void <init>()>();
-        return temp$0;
+        r0 := @this: calc.noSwing.MyJFrame;
+        $r1 = new calc.noSwing.Container;
+        specialinvoke $r1.<calc.noSwing.Container: void <init>()>();
+        return $r1;
     }
 
     public void setVisible(boolean)
     {
-        calc.noSwing.MyJFrame this;
-        boolean b;
+        calc.noSwing.MyJFrame r0;
+        boolean z0;
 
-        this := @this: calc.noSwing.MyJFrame;
-        b := @parameter0: boolean;
-        return;
-    }
-
-    public void <init>()
-    {
-        calc.noSwing.MyJFrame this;
-
-        this := @this: calc.noSwing.MyJFrame;
-        specialinvoke this.<java.lang.Object: void <init>()>();
+        r0 := @this: calc.noSwing.MyJFrame;
+        z0 := @parameter0: boolean;
         return;
     }
 }

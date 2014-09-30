@@ -5,72 +5,72 @@ public abstract class calc.view.JFrameView extends calc.noSwing.MyJFrame impleme
 
     public void <init>(calc.model.Model, calc.controller.Controller)
     {
-        calc.view.JFrameView this;
-        calc.model.Model model;
-        calc.controller.Controller controller;
+        calc.view.JFrameView r0;
+        calc.model.Model r1;
+        calc.controller.Controller r2;
 
-        this := @this: calc.view.JFrameView;
-        model := @parameter0: calc.model.Model;
-        controller := @parameter1: calc.controller.Controller;
-        specialinvoke this.<calc.noSwing.MyJFrame: void <init>()>();
-        virtualinvoke this.<calc.view.JFrameView: void setModel(calc.model.Model)>(model);
-        virtualinvoke this.<calc.view.JFrameView: void setController(calc.controller.Controller)>(controller);
+        r0 := @this: calc.view.JFrameView;
+        r1 := @parameter0: calc.model.Model;
+        r2 := @parameter1: calc.controller.Controller;
+        specialinvoke r0.<calc.noSwing.MyJFrame: void <init>()>();
+        virtualinvoke r0.<calc.view.JFrameView: void setModel(calc.model.Model)>(r1);
+        virtualinvoke r0.<calc.view.JFrameView: void setController(calc.controller.Controller)>(r2);
         return;
     }
 
     public void registerWithModel()
     {
-        calc.view.JFrameView this;
-        calc.model.Model temp$0;
-        calc.model.AbstractModel temp$1;
+        calc.view.JFrameView r0;
+        calc.model.Model $r1;
+        calc.model.AbstractModel $r2;
 
-        this := @this: calc.view.JFrameView;
-        temp$0 = this.<calc.view.JFrameView: calc.model.Model model>;
-        temp$1 = (calc.model.AbstractModel) temp$0;
-        virtualinvoke temp$1.<calc.model.AbstractModel: void addModelListener(calc.model.ModelListener)>(this);
+        r0 := @this: calc.view.JFrameView;
+        $r1 = r0.<calc.view.JFrameView: calc.model.Model model>;
+        $r2 = (calc.model.AbstractModel) $r1;
+        virtualinvoke $r2.<calc.model.AbstractModel: void addModelListener(calc.model.ModelListener)>(r0);
         return;
     }
 
     public calc.controller.Controller getController()
     {
-        calc.view.JFrameView this;
-        calc.controller.Controller temp$0;
+        calc.view.JFrameView r0;
+        calc.controller.Controller $r1;
 
-        this := @this: calc.view.JFrameView;
-        temp$0 = this.<calc.view.JFrameView: calc.controller.Controller controller>;
-        return temp$0;
+        r0 := @this: calc.view.JFrameView;
+        $r1 = r0.<calc.view.JFrameView: calc.controller.Controller controller>;
+        return $r1;
     }
 
     public void setController(calc.controller.Controller)
     {
-        calc.view.JFrameView this;
-        calc.controller.Controller controller;
+        calc.view.JFrameView r0;
+        calc.controller.Controller r1;
 
-        this := @this: calc.view.JFrameView;
-        controller := @parameter0: calc.controller.Controller;
-        this.<calc.view.JFrameView: calc.controller.Controller controller> = controller;
+        r0 := @this: calc.view.JFrameView;
+        r1 := @parameter0: calc.controller.Controller;
+        r0.<calc.view.JFrameView: calc.controller.Controller controller> = r1;
         return;
     }
 
     public calc.model.Model getModel()
     {
-        calc.view.JFrameView this;
-        calc.model.Model temp$0;
+        calc.view.JFrameView r0;
+        calc.model.Model $r1;
 
-        this := @this: calc.view.JFrameView;
-        temp$0 = this.<calc.view.JFrameView: calc.model.Model model>;
-        return temp$0;
+        r0 := @this: calc.view.JFrameView;
+        $r1 = r0.<calc.view.JFrameView: calc.model.Model model>;
+        return $r1;
     }
 
     public void setModel(calc.model.Model)
     {
-        calc.view.JFrameView this;
-        calc.model.Model model;
+        calc.view.JFrameView r0;
+        calc.model.Model r1;
 
-        this := @this: calc.view.JFrameView;
-        model := @parameter0: calc.model.Model;
-        this.<calc.view.JFrameView: calc.model.Model model> = model;
-        virtualinvoke this.<calc.view.JFrameView: void registerWithModel()>();
+        r0 := @this: calc.view.JFrameView;
+        r1 := @parameter0: calc.model.Model;
+        r0.<calc.view.JFrameView: calc.model.Model model> = r1;
+        virtualinvoke r0.<calc.view.JFrameView: void registerWithModel()>();
         return;
     }
 }

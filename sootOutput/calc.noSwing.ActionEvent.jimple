@@ -4,27 +4,27 @@ public class calc.noSwing.ActionEvent extends java.lang.Object
 
     public void <init>(java.lang.Object, int, java.lang.String)
     {
-        calc.noSwing.ActionEvent this;
-        java.lang.Object obj;
-        int id;
-        java.lang.String message;
+        calc.noSwing.ActionEvent r0;
+        java.lang.Object r1;
+        int i0;
+        java.lang.String r2;
 
-        this := @this: calc.noSwing.ActionEvent;
-        obj := @parameter0: java.lang.Object;
-        id := @parameter1: int;
-        message := @parameter2: java.lang.String;
-        specialinvoke this.<java.lang.Object: void <init>()>();
-        this.<calc.noSwing.ActionEvent: java.lang.String msg> = message;
+        r0 := @this: calc.noSwing.ActionEvent;
+        r1 := @parameter0: java.lang.Object;
+        i0 := @parameter1: int;
+        r2 := @parameter2: java.lang.String;
+        specialinvoke r0.<java.lang.Object: void <init>()>();
+        r0.<calc.noSwing.ActionEvent: java.lang.String msg> = r2;
         return;
     }
 
     public java.lang.String getActionCommand()
     {
-        calc.noSwing.ActionEvent this;
-        java.lang.String temp$0;
+        calc.noSwing.ActionEvent r0;
+        java.lang.String $r1;
 
-        this := @this: calc.noSwing.ActionEvent;
-        temp$0 = this.<calc.noSwing.ActionEvent: java.lang.String msg>;
-        return temp$0;
+        r0 := @this: calc.noSwing.ActionEvent;
+        $r1 = r0.<calc.noSwing.ActionEvent: java.lang.String msg>;
+        return $r1;
     }
 }

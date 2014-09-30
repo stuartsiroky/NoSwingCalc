@@ -2,81 +2,72 @@ public abstract class calc.model.AbstractModel extends java.lang.Object implemen
 {
     private java.util.ArrayList listeners;
 
+    public void <init>()
+    {
+        calc.model.AbstractModel r0;
+        java.util.ArrayList $r1;
+
+        r0 := @this: calc.model.AbstractModel;
+        specialinvoke r0.<java.lang.Object: void <init>()>();
+        $r1 = new java.util.ArrayList;
+        specialinvoke $r1.<java.util.ArrayList: void <init>(int)>(5);
+        r0.<calc.model.AbstractModel: java.util.ArrayList listeners> = $r1;
+        return;
+    }
+
     public void notifyChanged(calc.model.ModelEvent)
     {
-        calc.model.AbstractModel this;
-        calc.model.ModelEvent event;
-        java.util.ArrayList list, temp$0;
-        java.lang.Object temp$1, temp$4;
-        java.util.Iterator it, temp$2;
-        boolean temp$3;
-        calc.model.ModelListener ml;
+        calc.model.AbstractModel r0;
+        calc.model.ModelEvent r1;
+        java.util.ArrayList r2, $r5;
+        java.util.Iterator r3;
+        calc.model.ModelListener r4;
+        java.lang.Object $r6, $r7;
+        boolean $z0;
 
-        this := @this: calc.model.AbstractModel;
-        event := @parameter0: calc.model.ModelEvent;
-        temp$0 = this.<calc.model.AbstractModel: java.util.ArrayList listeners>;
-        temp$1 = virtualinvoke temp$0.<java.util.ArrayList: java.lang.Object clone()>();
-        list = (java.util.ArrayList) temp$1;
-        temp$2 = virtualinvoke list.<java.util.ArrayList: java.util.Iterator iterator()>();
-        it = temp$2;
-
-     label0:
-        nop;
-        temp$3 = interfaceinvoke it.<java.util.Iterator: boolean hasNext()>();
-        if temp$3 == 0 goto label2;
-
+        r0 := @this: calc.model.AbstractModel;
+        r1 := @parameter0: calc.model.ModelEvent;
+        $r5 = r0.<calc.model.AbstractModel: java.util.ArrayList listeners>;
+        $r6 = virtualinvoke $r5.<java.util.ArrayList: java.lang.Object clone()>();
+        r2 = (java.util.ArrayList) $r6;
+        r3 = virtualinvoke r2.<java.util.ArrayList: java.util.Iterator iterator()>();
         goto label1;
 
-     label1:
-        nop;
-        temp$4 = interfaceinvoke it.<java.util.Iterator: java.lang.Object next()>();
-        ml = (calc.model.ModelListener) temp$4;
-        interfaceinvoke ml.<calc.model.ModelListener: void modelChanged(calc.model.ModelEvent)>(event);
-        goto label0;
+     label0:
+        $r7 = interfaceinvoke r3.<java.util.Iterator: java.lang.Object next()>();
+        r4 = (calc.model.ModelListener) $r7;
+        interfaceinvoke r4.<calc.model.ModelListener: void modelChanged(calc.model.ModelEvent)>(r1);
 
-     label2:
-        nop;
+     label1:
+        $z0 = interfaceinvoke r3.<java.util.Iterator: boolean hasNext()>();
+        if $z0 != 0 goto label0;
+
         return;
     }
 
     public void addModelListener(calc.model.ModelListener)
     {
-        calc.model.AbstractModel this;
-        calc.model.ModelListener l;
-        java.util.ArrayList temp$0;
-        boolean temp$1;
+        calc.model.AbstractModel r0;
+        calc.model.ModelListener r1;
+        java.util.ArrayList $r2;
 
-        this := @this: calc.model.AbstractModel;
-        l := @parameter0: calc.model.ModelListener;
-        temp$0 = this.<calc.model.AbstractModel: java.util.ArrayList listeners>;
-        temp$1 = virtualinvoke temp$0.<java.util.ArrayList: boolean add(java.lang.Object)>(l);
+        r0 := @this: calc.model.AbstractModel;
+        r1 := @parameter0: calc.model.ModelListener;
+        $r2 = r0.<calc.model.AbstractModel: java.util.ArrayList listeners>;
+        virtualinvoke $r2.<java.util.ArrayList: boolean add(java.lang.Object)>(r1);
         return;
     }
 
     public void removeModelListener(calc.model.ModelListener)
     {
-        calc.model.AbstractModel this;
-        calc.model.ModelListener l;
-        java.util.ArrayList temp$0;
-        boolean temp$1;
+        calc.model.AbstractModel r0;
+        calc.model.ModelListener r1;
+        java.util.ArrayList $r2;
 
-        this := @this: calc.model.AbstractModel;
-        l := @parameter0: calc.model.ModelListener;
-        temp$0 = this.<calc.model.AbstractModel: java.util.ArrayList listeners>;
-        temp$1 = virtualinvoke temp$0.<java.util.ArrayList: boolean remove(java.lang.Object)>(l);
-        return;
-    }
-
-    public void <init>()
-    {
-        calc.model.AbstractModel this;
-        java.util.ArrayList temp$0;
-
-        this := @this: calc.model.AbstractModel;
-        specialinvoke this.<java.lang.Object: void <init>()>();
-        temp$0 = new java.util.ArrayList;
-        specialinvoke temp$0.<java.util.ArrayList: void <init>(int)>(5);
-        this.<calc.model.AbstractModel: java.util.ArrayList listeners> = temp$0;
+        r0 := @this: calc.model.AbstractModel;
+        r1 := @parameter0: calc.model.ModelListener;
+        $r2 = r0.<calc.model.AbstractModel: java.util.ArrayList listeners>;
+        virtualinvoke $r2.<java.util.ArrayList: boolean remove(java.lang.Object)>(r1);
         return;
     }
 }
