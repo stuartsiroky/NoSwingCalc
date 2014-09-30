@@ -104,7 +104,7 @@ public class CalculatorView extends JFrameView {
 	public class Handler implements ActionListener {
 		// Event handling is handled locally
 		public void actionPerformed(ActionEvent e) {
-			if(fake_state == 0){
+			if(fake_state == 1){
 				ModelEvent me = new ModelEvent(this, 101, "invalid path", -101);
 				modelChanged(me);
 			} else {
