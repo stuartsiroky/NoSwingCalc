@@ -14,6 +14,9 @@ public class CalculatorModel extends AbstractModel {
 		notifyChanged(me);
 	}
 	
+	public void notifyChanged(ModelEvent event){
+	super.notifyChanged(event);
+	}
 	public void add()//throws Digit5
 	{//if(current == 5) throw new Digit5("method add class CalculatorModel: current is 5");
 		state = "add"; total = current;
