@@ -20,6 +20,9 @@ public class CalculatorView extends JFrameView {
 	public static final String MINUS = "-";
 	public static final String CLEAR = "Clr";
 	public static final String EQUALS = "=";
+	public static final String HELLO = "HI";//FAKE
+	public static final String BOO = "BOO";//FAKE
+	
 	public static int fake_state = 0;
 	private JTextField textField = new JTextField();
 	public  JButton jButton1 = new JButton("1");
@@ -36,6 +39,8 @@ public class CalculatorView extends JFrameView {
 	public  JButton plusButton = new JButton(PLUS);
 	public  JButton clearButton = new JButton(CLEAR);
 	public  JButton equalsButton = new JButton(EQUALS);
+	public  JButton helloButton = new JButton(HELLO);
+	public  JButton booButton = new JButton(BOO);
 	public Handler handler = new Handler();
 	
 	public CalculatorView(CalculatorModel model, CalculatorController controller) {
@@ -44,35 +49,22 @@ public class CalculatorView extends JFrameView {
 		textField.setText("0");
 		this.getContentPane().add(textField, BorderLayout.NORTH);
 		JPanel buttonPanel = new JPanel();
-		//Handler handler = new Handler();
-		//JButton jButton1 = new JButton("1");
 		jButton1.addActionListener(handler);
-		//JButton jButton2 = new JButton("2");
 		jButton2.addActionListener(handler);
-		//JButton jButton3 = new JButton("3");
 		jButton3.addActionListener(handler);
-		//JButton jButton4 = new JButton("4");
 		jButton4.addActionListener(handler);
-		//JButton jButton5 = new JButton("5");
 		jButton5.addActionListener(handler);
-		//JButton jButton6 = new JButton("6");
 		jButton6.addActionListener(handler);
-		//JButton jButton7 = new JButton("7");
 		jButton7.addActionListener(handler);
-		//JButton jButton8 = new JButton("8");
 		jButton8.addActionListener(handler);
-		//JButton jButton9 = new JButton("9");
 		jButton9.addActionListener(handler);
-		//JButton jButton0 = new JButton("0");
 		jButton0.addActionListener(handler);
-		//JButton minusButton = new JButton(MINUS);
 		minusButton.addActionListener(handler);
-		//JButton plusButton = new JButton(PLUS);
 		plusButton.addActionListener(handler);
-		//JButton clearButton = new JButton(CLEAR);
 		clearButton.addActionListener(handler);
-		//JButton equalsButton = new JButton(EQUALS);
 		equalsButton.addActionListener(handler);
+		helloButton.addActionListener(handler);
+		booButton.addActionListener(handler);
 		buttonPanel.setLayout(new GridLayout(4, 4, 5, 5));
 		this.getContentPane().add(buttonPanel, BorderLayout.CENTER);
 		buttonPanel.add(jButton1, null);
@@ -104,6 +96,7 @@ public class CalculatorView extends JFrameView {
 	public class Handler implements ActionListener {
 		// Event handling is handled locally
 		public void actionPerformed(ActionEvent e) {
+//		vv3();
 			if(fake_state == 1){
 				ModelEvent me = new ModelEvent(this, 101, "invalid path", -101);
 				modelChanged(me);
@@ -124,15 +117,9 @@ public class CalculatorView extends JFrameView {
 		//FORJPF 		int b = Verify.getInt(-1,2);
 		CalculatorController cc = new CalculatorController();
 		CalculatorView cv = (CalculatorView) cc.getView();
-		//cv.jButton1.pushed();
-		//cv.plusButton.pushed();
-		//cv.jButton3.pushed();
-		//cv.equalsButton.pushed();
-		//cc.operation("1");
-		//cc.operation(PLUS);
-		//cc.operation("3");
-		//cc.operation(EQUALS);
+
 		start(cv,a,b);
+		start(cv,0,1);
 	}
 	static void start (CalculatorView calc, int a, int b) {
 		if(a > b){
@@ -146,8 +133,15 @@ public class CalculatorView extends JFrameView {
 			ActionEvent e = new ActionEvent(calc, 101, "101");
 			calc.handler.actionPerformed(e);
 		}
-		
+//		vv6();
 		equals(calc);
+//		if (a == 1) {
+//			hello(calc);
+//		} else if (b == 1) {
+//			boo(calc);
+//		} else {
+//			vv0();
+//		}
 	}
 	
 	static void addition(CalculatorView calc, int a, int b){
@@ -165,6 +159,9 @@ public class CalculatorView extends JFrameView {
 	static void equals(CalculatorView calc){
 		calc.equalsButton.pushed();
 	}
+
+
+	
 	static void pickButton(CalculatorView calc, int val){
 		switch(val) {
 		case 0: calc.jButton0.pushed(); break;
@@ -179,5 +176,33 @@ public class CalculatorView extends JFrameView {
 		case 9: calc.jButton9.pushed(); break;
 		}
 	}
+
+//	static void hello(CalculatorView calc){
+//		pickButton(calc,0);
+//		pickButton(calc,1);
+//		pickButton(calc,1);
+//		pickButton(calc,3);
+//		pickButton(calc,4);
+//		calc.helloButton.pushed();
+//		vv3();
+//	}
+//
+//	static void boo(CalculatorView calc){
+//		pickButton(calc,0);
+//		pickButton(calc,0);
+//		pickButton(calc,8);
+//		calc.booButton.pushed();
+//	}	
+//	private static void vv0() {vv1();}
+//	private static void vv1() {vv2();}
+//	private static void vv2() {vv3();}
+//	private static void vv3() {vv4();}
+//	private static void vv4() {vv5();}
+//	private static void vv5() {vv6();}
+//	private static void vv6() {vv7();}
+//	private static void vv7() {vv8();}
+//	private static void vv8() {vv9();}
+//	private static void vv9() {}
+
 
 }
