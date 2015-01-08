@@ -1,8 +1,4 @@
 package calc.view;
-//FORJPF import gov.nasa.jpf.vm.Verify;
-//import javax.swing.*; 
-//import java.awt.*; 
-//import java.awt.event.*;
 
 import calc.controller.CalculatorController;
 import calc.model.CalculatorModel;
@@ -104,8 +100,8 @@ public class CalculatorView extends JFrameView {
 			CalculatorController c = (CalculatorController) getController();
 			String ae = e.getActionCommand();
 			c.operation(ae);
-			((CalculatorController) getController()).operation(e
-					.getActionCommand());
+			//((CalculatorController) getController()).operation(e
+			//		.getActionCommand());
 		    }
 		}
 	}
@@ -113,8 +109,7 @@ public class CalculatorView extends JFrameView {
 	public static void main(String[] args) {
 		int a = 1;
 		int b = 3;	
-		//FORJPF 		int a = Verify.getInt(-1,2);
-		//FORJPF 		int b = Verify.getInt(-1,2);
+
 		CalculatorController cc = new CalculatorController();
 		CalculatorView cv = (CalculatorView) cc.getView();
 
