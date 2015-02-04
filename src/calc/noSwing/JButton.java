@@ -1,19 +1,15 @@
 package calc.noSwing;
 
-public class JButton {
-	private String str;
-	private ActionListener hdlr;
-	
+public abstract class JButton {
+	protected String str;
+	protected ActionListener hdlr;
+
 	public JButton(String string) {
 		str = string;
 	}
 
-	public void addActionListener(ActionListener handler) {
-		hdlr = handler;
-	}
+	public abstract void addActionListener(ActionListener handler);
 
-	public void pushed() {
-		ActionEvent e = new ActionEvent(this,1,str);
-		hdlr.actionPerformed(e);
-	}
+	public abstract void pushed();
+
 }

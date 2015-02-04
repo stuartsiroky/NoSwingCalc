@@ -1,6 +1,5 @@
 package calc.noSwing;
 
-
 public class BorderLayout {
 
 	public static final String CENTER = null;
