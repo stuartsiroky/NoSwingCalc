@@ -6,12 +6,12 @@ import events.ClrActionEvent;
 
 public class ClrButton extends JButton {
 
-	public ClrButton(String string, ActionListener handler) {
+	public ClrButton(String string) {
 		super(string);
-		hdlr = handler;
 	}
 
 	public void addActionListener(ActionListener handler) {
+		System.out.println("ClrButton.addActionListener(ActionListener handler)");
 		hdlr = handler;
 	}
 

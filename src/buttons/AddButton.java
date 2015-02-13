@@ -6,12 +6,12 @@ import events.AddActionEvent;
 
 public class AddButton extends JButton {
 
-	public AddButton(String string, ActionListener handler) {
+	public AddButton(String string) {
 		super(string);
-		hdlr = handler;
 	}
 
 	public void addActionListener(ActionListener handler) {
+		System.out.println("AddButton.addActionListener(ActionListener handler)");
 		hdlr = handler;
 	}
 

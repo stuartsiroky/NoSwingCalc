@@ -8,6 +8,7 @@ public abstract class AbstractModel implements Model {
 	private ArrayList listeners = new ArrayList(5);
 
 	public void notifyChanged(ModelEvent event) {
+		System.out.println("AbstractModel.notifyChanged(ModelEvent event)");
 		@SuppressWarnings("rawtypes")
 		ArrayList list = (ArrayList) listeners.clone();
 		@SuppressWarnings("rawtypes")
@@ -20,10 +21,12 @@ public abstract class AbstractModel implements Model {
 
 	@SuppressWarnings("unchecked")
 	public void addModelListener(ModelListener l) {
+		System.out.println("AbstractModel.addModelListener(ModelListener l)");
 		listeners.add(l);
 	}
 
 	public void removeModelListener(ModelListener l) {
+		System.out.println("AbstractModel.removeModelListener(ModelListener l)");
 		listeners.remove(l);
 	}
 }

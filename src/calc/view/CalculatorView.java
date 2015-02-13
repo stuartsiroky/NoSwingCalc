@@ -1,5 +1,6 @@
 package calc.view;
 
+import linkedListPkg.RunnableLinkedList;
 import buttons.AddButton;
 import buttons.ClrButton;
 import buttons.EqualsButton;
@@ -21,7 +22,6 @@ public class CalculatorView extends JFrameView {
 	public static final String CLEAR = "Clr";
 	public static final String EQUALS = "=";
 
-	// public static int fake_state = 0;
 	private JTextField textField = new JTextField();
 
 	public NumHandler numhandler = new NumHandler();
@@ -29,20 +29,21 @@ public class CalculatorView extends JFrameView {
 	public AddHandler addhandler = new AddHandler();
 	public SubHandler subhandler = new SubHandler();
 	public EqHandler eqhandler = new EqHandler();
-	public NumButton jButton1 = new NumButton("1", numhandler);
-	public NumButton jButton2 = new NumButton("2", numhandler);
-	public NumButton jButton3 = new NumButton("3", numhandler);
-	public NumButton jButton4 = new NumButton("4", numhandler);
-	public NumButton jButton5 = new NumButton("5", numhandler);
-	public NumButton jButton6 = new NumButton("6", numhandler);
-	public NumButton jButton7 = new NumButton("7", numhandler);
-	public NumButton jButton8 = new NumButton("8", numhandler);
-	public NumButton jButton9 = new NumButton("9", numhandler);
-	public NumButton jButton0 = new NumButton("0", numhandler);
-	public SubButton minusButton = new SubButton(MINUS, subhandler);
-	public AddButton plusButton = new AddButton(PLUS, addhandler);
-	public ClrButton clearButton = new ClrButton(CLEAR, clrhandler);
-	public EqualsButton equalsButton = new EqualsButton(EQUALS, eqhandler);
+	public NumButton jButton1 = new NumButton("1");
+	public NumButton jButton2 = new NumButton("2");
+	public NumButton jButton3 = new NumButton("3");
+	public NumButton jButton4 = new NumButton("4");
+	public NumButton jButton5 = new NumButton("5");
+	public NumButton jButton6 = new NumButton("6");
+	public NumButton jButton7 = new NumButton("7");
+	public NumButton jButton8 = new NumButton("8");
+	public NumButton jButton9 = new NumButton("9");
+	public NumButton jButton0 = new NumButton("0");
+	public SubButton minusButton = new SubButton(MINUS);
+	public AddButton plusButton = new AddButton(PLUS);
+	public ClrButton clearButton = new ClrButton(CLEAR);
+	public EqualsButton equalsButton = new EqualsButton(EQUALS);
+	public static CalculatorView cv;
 
 	public CalculatorView(CalculatorModel model, CalculatorController controller) {
 		super(model, controller);
@@ -51,7 +52,6 @@ public class CalculatorView extends JFrameView {
 		this.getContentPane().add(textField, BorderLayout.NORTH);
 		JPanel buttonPanel = new JPanel();
 		buttonPanel.setLayout(new GridLayout(4, 4, 5, 5));
-		this.getContentPane().add(buttonPanel, BorderLayout.CENTER);
 		buttonPanel.add(jButton1, null);
 		buttonPanel.add(jButton2, null);
 		buttonPanel.add(jButton3, null);
@@ -66,12 +66,28 @@ public class CalculatorView extends JFrameView {
 		buttonPanel.add(plusButton, null);
 		buttonPanel.add(clearButton, null);
 		buttonPanel.add(equalsButton, null);
+		jButton1.addActionListener(numhandler);
+		jButton2.addActionListener(numhandler);
+		jButton3.addActionListener(numhandler);
+		jButton4.addActionListener(numhandler);
+		jButton5.addActionListener(numhandler);
+		jButton6.addActionListener(numhandler);
+		jButton7.addActionListener(numhandler);
+		jButton8.addActionListener(numhandler);
+		jButton9.addActionListener(numhandler);
+		jButton0.addActionListener(numhandler);
+		minusButton.addActionListener(subhandler);
+		plusButton.addActionListener(addhandler);
+		clearButton.addActionListener(clrhandler);
+		equalsButton.addActionListener(eqhandler);
+		this.getContentPane().add(buttonPanel, BorderLayout.CENTER);
 		pack();
 
 	}
 
 	// Now implement the necessary event handling code
 	public void modelChanged(ModelEvent event) {
+		System.out.println("CalculatorView.modelChanged(ModelEvent event)");
 		String msg = event.getAmount() + "";
 		textField.setText(msg);
 		System.out.println("\t" + msg);
@@ -80,16 +96,16 @@ public class CalculatorView extends JFrameView {
 	// Inner classes for Event Handling
 	public abstract class Handler implements ActionListener {
 		// Event handling is handled locally
-		public void actionPerformed(ActionEvent e) {
-			// CalculatorController c = (CalculatorController) getController();
-			// String ae = e.getActionCommand();
-			// c.numOperation(ae);
-		}
+//		public void actionPerformed(ActionEvent e) {
+//			System.out.println(".");
+//		}
+		public abstract void actionPerformed(ActionEvent e);
 	}
 
 	// Inner classes for Event Handling
 	public class EqHandler extends Handler {
 		public void actionPerformed(ActionEvent e) {
+			System.out.println("EqHandler.actionPerformed(ActionEvent e)");
 			CalculatorController c = (CalculatorController) getController();
 			c.equalsOperation();
 		}
@@ -100,6 +116,7 @@ public class CalculatorView extends JFrameView {
 	public class AddHandler extends Handler {
 		// Event handling is handled locally
 		public void actionPerformed(ActionEvent e) {
+			System.out.println("AddHandler.actionPerformed(ActionEvent e)");
 			CalculatorController c = (CalculatorController) getController();
 			c.addOperation();
 		}
@@ -109,6 +126,7 @@ public class CalculatorView extends JFrameView {
 	public class SubHandler extends Handler {
 		// Event handling is handled locally
 		public void actionPerformed(ActionEvent e) {
+			System.out.println("SubHandler.actionPerformed(ActionEvent e)");
 			CalculatorController c = (CalculatorController) getController();
 			c.subOperation();
 		}
@@ -118,6 +136,7 @@ public class CalculatorView extends JFrameView {
 	public class ClrHandler extends Handler {
 		// Event handling is handled locally
 		public void actionPerformed(ActionEvent e) {
+			System.out.println("ClrHandler.actionPerformed(ActionEvent e)");
 			CalculatorController c = (CalculatorController) getController();
 			c.clrOperation();
 		}
@@ -127,6 +146,7 @@ public class CalculatorView extends JFrameView {
 	public class NumHandler extends Handler {
 		// Event handling is handled locally
 		public void actionPerformed(ActionEvent e) {
+			System.out.println("NumHandler.actionPerformed(ActionEvent e)");
 			CalculatorController c = (CalculatorController) getController();
 			String ae = e.getActionCommand();
 			c.numOperation(ae);
@@ -136,47 +156,50 @@ public class CalculatorView extends JFrameView {
 	public static void main(String[] args) {
 		int a = 1;
 		int b = 3;
+		System.out.println("CalculatorView.main(String[] args)");
 
 		CalculatorController cc = new CalculatorController();
-		CalculatorView cv = (CalculatorView) cc.getView();
+		cv = (CalculatorView) cc.getView();
 
-		start(cv, a, b);
+		start(a, b);
+
 	}
 
-	static void start(CalculatorView calc, int a, int b) {
+	static void start(int a, int b) {
+		System.out.println("CalculatorView.start(int a, int b)");
 		if (a > b) {
-			// fake_state = 0;
-			addition(calc, a, b);
+			addition(cv, a, b);
 		} else if (a < b) {
-			// fake_state = 0;
-			subtraction(calc, b, a);
+			subtraction(cv, b, a);
 		}
-		// else {
-		// fake_state = 1;
-		// EqualsActionEvent e = new EqualsActionEvent(calc, 101, "101");
-		// calc.handler.actionPerformed(e);
-		// }
-		equalsMethod(calc);
-
+		equalsMethod(cv);
 	}
 
 	static void addition(CalculatorView calc, int a, int b) {
+		System.out.println("CalculatorView.addition(CalculatorView calc, int a, int b)");
+		(new Thread(new RunnableLinkedList())).start();
 		pickButton(calc, a);
 		calc.plusButton.pushed();
 		pickButton(calc, b);
 	}
 
 	static void subtraction(CalculatorView calc, int a, int b) {
+		System.out.println("CalculatorView.subtraction(CalculatorView calc, int a, int b)");
+		(new Thread(new RunnableLinkedList())).start();
 		pickButton(calc, b);
 		calc.minusButton.pushed();
 		pickButton(calc, a);
 	}
 
 	static void equalsMethod(CalculatorView calc) {
+		System.out.println("CalculatorView.equalsMethod(CalculatorView calc)");
 		calc.equalsButton.pushed();
+		(new Thread(new RunnableLinkedList())).start();
 	}
 
 	static void pickButton(CalculatorView calc, int val) {
+		System.out.println("CalculatorView.pickButton(CalculatorView calc, int val)");
+		(new Thread(new RunnableLinkedList())).start();
 		switch (val) {
 		case 0:
 			calc.jButton0.pushed();

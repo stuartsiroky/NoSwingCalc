@@ -9,31 +9,37 @@ public class CalculatorModel extends AbstractModel {
 	private String state = "add";
 
 	public void clear() {
+		System.out.println("CalculatorModel.clear()");
 		total = 0;
 		store(0);
 	}
 
 	public void store(int value) {
+		System.out.println("CalculatorModel.store(int value)");
 		current = value;
 		StoreModelEvent me = new StoreModelEvent(this, 1, "", current);
 		notifyChanged(me);
 	}
 
-	public void notifyChanged(ModelEvent event) {
-		super.notifyChanged(event);
-	}
+//	public void notifyChanged(ModelEvent event) {
+//		super.notifyChanged(event);
+//		System.out.println(".");
+//	}
 
 	public void add() {
+		System.out.println("CalculatorModel.add()");
 		state = "add";
 		total = current;
 	}
 
 	public void subtract() {
+		System.out.println("CalculatorModel.subtract()");
 		state = "subtract";
 		total = current;
 	}
 
 	public void equalsOp() {
+		System.out.println("CalculatorModel.equalsOp()");
 		if (state == "add") {
 			total += current;
 		} else {
@@ -45,6 +51,7 @@ public class CalculatorModel extends AbstractModel {
 	}
 
 	public int getTotal() {
+		System.out.println("CalculatorModel.getTotal()");
 		return total;
 	}
 }

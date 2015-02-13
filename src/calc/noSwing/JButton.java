@@ -5,6 +5,7 @@ public abstract class JButton {
 	protected ActionListener hdlr;
 
 	public JButton(String string) {
+//		System.out.println("JButton.JButton(String string)");
 		str = string;
 	}
 

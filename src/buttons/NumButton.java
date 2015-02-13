@@ -6,12 +6,12 @@ import events.NumActionEvent;
 
 public class NumButton extends JButton {
 
-	public NumButton(String string, ActionListener handler) {
+	public NumButton(String string) {
 		super(string);
-		hdlr = handler;
 	}
 
 	public void addActionListener(ActionListener handler) {
+		System.out.println("NumButton.addActionListener(ActionListener handler)");
 		hdlr = handler;
 	}
 
