@@ -173,7 +173,7 @@ public class CalculatorView extends JFrameView {
 
 	static void addition(CalculatorView calc, int a, int b) {
 		System.out.println("CalculatorView.addition(CalculatorView calc, int a, int b)");
-		(new Thread(new RunnableLinkedList())).start();
+//		(new Thread(new RunnableLinkedList())).start();
 		pickButton(calc, a);
 		calc.plusButton.pushed();
 		pickButton(calc, b);
@@ -190,11 +190,11 @@ public class CalculatorView extends JFrameView {
 	static void equalsMethod(CalculatorView calc) {
 		System.out.println("CalculatorView.equalsMethod(CalculatorView calc)");
 		calc.equalsButton.pushed();
-//		(new Thread(new RunnableLinkedList())).start();
+		(new Thread(new RunnableLinkedList())).start();
 	}
 
 	static void pickButton(CalculatorView calc, int val) {
-//		System.out.println("CalculatorView.pickButton(CalculatorView calc, int val)");
+		System.out.println("CalculatorView.pickButton(CalculatorView calc, int val)");
 		(new Thread(new RunnableLinkedList())).start();
 		switch (val) {
 		case 0:
